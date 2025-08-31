@@ -15,9 +15,7 @@ body {
     font-family: 'HYWenHei 85W';
     overflow-y: scroll; 
     overflow-x: hidden;
-    scrollbar-width: none; 
 }
-
 
 navbar {
     position: fixed;
@@ -61,6 +59,24 @@ navbar {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+}
+
+.social-icons {
+    position: absolute;       
+    top: 40vh;                
+    right: 0;              
+    display: flex;
+    flex-direction: column;            
+    z-index: 10;              
+}
+
+.social-icons img {
+    display: block;
+    background-color: black;
+    padding: 0.5vw;
+    width: 3vw;              
+    height: auto;
+    cursor: pointer;
 }
 
 .bg_video {
@@ -117,24 +133,68 @@ navbar {
     height: 100vh;
     background-color: #f2f0d8;
     display: flex;
-    flex-direction: column;      /* Stack children vertically */
-    justify-content: flex-start; /* Start from the top */
-    align-items: center;         /* Center horizontally */
-    background-image: url('border.png');
+    flex-direction: column;      
+    justify-content: flex-start; 
+    align-items: center;         
+    background-image: url('border1.png');
     background-size: 100vw 100vh;         
     background-position: center;    
     background-repeat: no-repeat; 
-    padding-top: 6vh;
 }
 
 .title1 {
-    font-size: 4vh;
     z-index: 1;
     text-align: center;
-    margin-top: 13vh;    
+    margin-top: 8vh;    
     margin-bottom: 1vh; 
     color:#f2c48d;    
-    font-size: 5vh;     
+    font-size: 7vh;     
+}
+
+.page2_des{
+    align-self: flex-start;
+    color: #7b544e;
+    font-size: 2vh;
+    line-height: 3vh;
+}
+
+.info1 {
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-between; 
+    width: 80%;               
+}
+
+.imageGI {
+    height: auto;
+    width: 30vw;               
+    object-fit: cover;
+    border-radius: 10px;      
+}
+
+/* Page 3 Styles */
+
+.page3 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f2f0d8;
+    display: flex;
+    flex-direction: column;      
+    justify-content: flex-start; 
+    align-items: center;         
+    background-image: url('border2.png');
+    background-size: 100vw 100vh;         
+    background-position: center;    
+    background-repeat: no-repeat; 
+}
+
+.title2 {
+    z-index: 1;
+    text-align: center;
+    margin-top: 19vh;    
+    margin-bottom: 1vh; 
+    color:#f2c48d;    
+    font-size: 7vh;     
 }
 
 .label {
@@ -163,31 +223,27 @@ navbar {
 .region-card:hover {
     transform: scale(1.05);
     transition: transform 0.5s ease;
-
 }
 
 .card-image {
     width: 100%;
     height: 100%;
-    border-radius: 1vh;
     display: block;
 }
 
 .overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    top: 0;
-    background-color: #f2c48d; 
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: 0.5s ease;
+    bottom: 0;
+    background-color: rgba(242, 196, 141, 0.9);
+    opacity: 0; 
+    transition: opacity 0.5s ease;
 }
 
 .region-card:hover .overlay {
-    width: 100%;
+    opacity: 1; 
 }
 
 .card_logo {
@@ -207,10 +263,184 @@ navbar {
     white-space: nowrap;
 }
 
-.title2 {
-    margin-bottom: -1vh;
-}
+.mondstadt_text { color: #3e9f85; margin-bottom: -1vh; }
+.liyue_text     { color: #ff8400; margin-bottom: -1vh; }
+.inazuma_text   { color: #6333ae; margin-bottom: -1vh; }
+.sumeru_text    { color: #3d8d57; margin-bottom: -1vh; }
+.fontaine_text  { color: #353ba7; margin-bottom: -1vh; }
+.natlan_text    { color: #ff4545; margin-bottom: -1vh; }
+.nod-krai_text  { color: #757AB0; margin-bottom: -1vh; }
+
+.title3 { margin-bottom: -1vh; }
 
 .region_des{
     font-size: 1.5vh;
+}
+
+/* Page 4 Styles */
+
+.page4 {
+    background-color: #f2f0d8;
+    display: flex;
+    flex-direction: column;      
+    justify-content: flex-start; 
+    align-items: center;         
+    background-image: url('map.png');
+    background-size: 100vw 100vh;         
+    background-position: center;    
+    background-repeat: no-repeat; 
+}
+
+.archon_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.archons {
+  width: 12vh;   
+  height: auto;
+  display: block;
+}
+
+.archon_card {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.archon_card:hover {
+  transform: scale(1.05);
+}
+
+.overlay1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(242, 196, 141, 0.9);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.archon_card:hover .overlay1 {
+  height: 30%;
+}
+
+.archon_des {
+  color: white;
+  text-align: center;
+  font-size: 1.5vh;
+}
+
+.link_archons {
+  font-size: 1vh;
+  text-decoration: underline;
+  color: #2c607d;
+}
+
+.link_archons:hover {
+  color: #ffffff;
+}
+
+.archon_card.venti   { top: 15%; left: 84%; }
+.archon_card.zhongli { top: 28%; left: 60%; }
+.archon_card.raiden  { top: 70%;  left: 75%; }
+.archon_card.nahida  { top: 60%; left: 45%; }
+.archon_card.furina  { top: 15%; left: 45%; }
+.archon_card.mavuika { top: 40%; left: 17%; }
+
+/* Page 5 Styles */
+
+.page5 {
+    height: 100vh;
+    width: 100vw;
+    background-color: #170129;
+    display: flex;
+    flex-direction: column;      
+    justify-content: flex-start; 
+    align-items: center; 
+    position: relative;        
+}
+
+.gallery{
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20vh;
+}
+
+.gallery_img{
+    width: 15vw;               
+    height: auto; 
+}
+
+.gallery_but{
+    background-color: #f5c556;
+    font-family: 'HYWenHei 85W';
+    border: none;
+    color: #ffffff;
+    padding: 2vh 2vh;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+
+.gallery_but:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.gallery1, .gallery2, .gallery3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.footer_text {
+    width: 100%;
+    height: 50vh;
+    background-color: #000000;
+    color: white;
+    justify-content: start;
+    text-align: center;
+    padding: 1vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.75vh;
+    line-height: 3vh;
+}
+
+.footer_infos{
+    display: grid;
+    font-size: 1.75vh;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vh;
+    margin: 5vh auto auto 12vh;
+    line-height: 5vh;
+    text-align: left;
+}
+
+.footer_logo {
+    display: flex;
+    margin: 0 auto 0.2vh auto;
+    margin-top: 2vh;
+    gap: 3vh;
+    justify-content: center;
+}
+
+.footer_logo img {
+    height: 7vh;   
+    width: auto;   
+    object-fit: contain; 
 }
