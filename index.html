@@ -293,5 +293,26 @@
 
     </footer>
 </section>
+
+<audio id="bgm" src="music1.mp3" loop muted></audio>
+
+<script>
+  const audio = document.getElementById("bgm");
+
+
+  audio.play().catch(() => {});
+
+  const startMusic = () => {
+    audio.muted = false; 
+    audio.play();       
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("keydown", startMusic);
+  };
+
+  document.addEventListener("click", startMusic);
+  document.addEventListener("keydown", startMusic);
+</script>
+
+
 </body>
 </html>

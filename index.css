@@ -444,3 +444,90 @@ navbar {
     width: auto;   
     object-fit: contain; 
 }
+
+/* ========================= */
+/* 📱 RESPONSIVE FIXES */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .info1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .imageGI {
+    width: 80%;
+  }
+
+  .regions-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 3vh;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3vh;
+  }
+
+  .footer_infos {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1vh 0;
+  }
+
+  .nav {
+    font-size: 2vh;
+    padding: 1vh;
+  }
+
+  .title1, .title2 {
+    font-size: 4vh;
+    margin-top: 5vh;
+  }
+
+  .info1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .regions-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 2vh;
+  }
+
+  .gallery_img {
+    width: 90%;
+    margin: auto;
+  }
+
+  .archon_card {
+    position: static; /* stop overlapping */
+    margin: 1vh auto;
+  }
+
+  .archon_container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_infos {
+    grid-template-columns: 1fr;
+    margin: 2vh auto;
+  }
+}
