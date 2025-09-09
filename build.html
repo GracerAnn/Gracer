@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gracer Build</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <navbar>
+        <a class="nav" href="index.html">Home</a>
+        <a class="nav" href="#">Regions</a>
+        <img src="GI_logo.jpg" alt="Genshin Impact Logo" class="logo">
+        <a class="nav" href="#">Characters</a>
+        <a class="nav" href="#builds">Builds</a>
+    </navbar>
+
+    <div class="form-container" id="builds">
+    <h2 class="text-center">Character Build Form</h2>
+    <p class="text-small mb-1">Please don't add "%" and make sure to round it up.</p>
+
+    <form id="buildForm">
+        <div class="form-row">
+        <div class="form-group">
+            <label for="character" class="mt-3">Character</label>
+            <select id="character" name="character" required>
+            <option value="">Select character</option>
+                <option value="traveler">Traveler</option>
+                <option value="albedo">Albedo</option>
+                <option value="alhaitham">Alhaitham</option>
+                <option value="amber">Amber</option>
+                <option value="arlecchino">Arlecchino</option>
+                <option value="arataki_itto">Arataki Itto</option>
+                <option value="ayato">Ayato</option>
+                <option value="baizhu">Baizhu</option>
+                <option value="barbara">Barbara</option>
+                <option value="beidou">Beidou</option>
+                <option value="bennett">Bennett</option>
+                <option value="candace">Candace</option>
+                <option value="chasca">Chasca</option>
+                <option value="chevreuse">Chevreuse</option>
+                <option value="chiori">Chiori</option>
+                <option value="chongyun">Chongyun</option>
+                <option value="clorinde">Clorinde</option>
+                <option value="collei">Collei</option>
+                <option value="cyno">Cyno</option>
+                <option value="dehya">Dehya</option>
+                <option value="diluc">Diluc</option>
+                <option value="diona">Diona</option>
+                <option value="dori">Dori</option>
+                <option value="emilie">Emilie</option>
+                <option value="eula">Eula</option>
+                <option value="faruzan">Faruzan</option>
+                <option value="fischl">Fischl</option>
+                <option value="freminet">Freminet</option>
+                <option value="furina">Furina</option>
+                <option value="ganyu">Ganyu</option>
+                <option value="gorou">Gorou</option>
+                <option value="heizou">Heizou</option>
+                <option value="hu_tao">Hu Tao</option>
+                <option value="jean">Jean</option>
+                <option value="kaedehara_kazuha">Kaedehara Kazuha</option>
+                <option value="kaeya">Kaeya</option>
+                <option value="kaveh">Kaveh</option>
+                <option value="keqing">Keqing</option>
+                <option value="klee">Klee</option>
+                <option value="kokomi">Kokomi</option>
+                <option value="kuki_shinobu">Kuki Shinobu</option>
+                <option value="lisa">Lisa</option>
+                <option value="lyney">Lyney</option>
+                <option value="mona">Mona</option>
+                <option value="ningguang">Ningguang</option>
+                <option value="noelle">Noelle</option>
+                <option value="nilou">Nilou</option>
+                <option value="qiqi">Qiqi</option>
+                <option value="raiden_shogun">Raiden Shogun</option>
+                <option value="razor">Razor</option>
+                <option value="rosaria">Rosaria</option>
+                <option value="sayu">Sayu</option>
+                <option value="sucrose">Sucrose</option>
+                <option value="tartaglia">Tartaglia</option>
+                <option value="thoma">Thoma</option>
+                <option value="tighnari">Tighnari</option>
+                <option value="venti">Venti</option>
+                <option value="wriothesley">Wriothesley</option>
+                <option value="xiao">Xiao</option>
+                <option value="xingqiu">Xingqiu</option>
+                <option value="xinyan">Xinyan</option>
+                <option value="yae_miko">Yae Miko</option>
+                <option value="yaoyao">Yaoyao</option>
+                <option value="yelan">Yelan</option>
+                <option value="yun_jin">Yun Jin</option>
+                <option value="zhongli">Zhongli</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+    <div class="form-group">
+        <label for="artifatcs" class="mt-3">Artifatcs</label>
+        <select id="artifacts" name="artifacts" required>
+            <option value="">Select Artifact</option>
+                <option value="adventurer">Adventurer</option>
+                <option value="archaic_petra">Archaic Petra</option>
+                <option value="berserker">Berserker</option>
+                <option value="blizzard_strayer">Blizzard Strayer</option>
+                <option value="bloodstained_chivalry">Bloodstained Chivalry</option>
+                <option value="brave_heart">Brave Heart</option>
+                <option value="crimson_witch_of_flames">Crimson Witch of Flames</option>
+                <option value="defenders_will">Defenders Will</option>
+                <option value="desert_pavilion_chronicle">Desert Pavilion Chronicle</option>
+                <option value="emblem_of_severed_fate">Emblem of Severed Fate</option>
+                <option value="gambler">Gambler</option>
+                <option value="gladiators_finale">Gladiator's Finale</option>
+                <option value="heart_of_depth">Heart of Depth</option>
+                <option value="husk_of_opulent_dreams">Husk of Opulent Dreams</option>
+                <option value="instructor">Instructor</option>
+                <option value="lavawalker">Lavawalker</option>
+                <option value="lucky_dog">Lucky Dog</option>
+                <option value="maiden_beloved">Maiden Beloved</option>
+                <option value="martial_artist">Martial Artist</option>
+                <option value="noblesse_oblige">Noblesse Oblige</option>
+                <option value="ocean_hued_clam">Ocean-Hued Clam</option>
+                <option value="pale_flame">Pale Flame</option>
+                <option value="retracing_bolide">Retracing Bolide</option>
+                <option value="shimenawas_reminiscence">Shimenawa's Reminiscence</option>
+                <option value="tenacity_of_the_millelith">Tenacity of the Millelith</option>
+                <option value="thundering_fury">Thundering Fury</option>
+                <option value="thundersoother">Thundersoother</option>
+                <option value="tiny_miracle">Tiny Miracle</option>
+                <option value="traveling_doctor">Traveling Doctor</option>
+                <option value="vermillion_hereafter">Vermillion Hereafter</option>
+                <option value="wanderers_troupe">Wanderer's Troupe</option>
+        </select>
+    </div>
+    </div>
+
+        <!-- Artifact Details -->
+        <div class="form-row">
+        <div class="form-info mt-2">
+            <label for="bonus">DMG Bonus</label>
+            <input type="text" id="bonus" name="bonus" placeholder="Enter characters element DMG bonus" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="dmg">Crit DMG</label>
+            <input type="text" id="dmg" name="dmg" placeholder="Enter Crit Damage" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="rate">Crit Rate</label>
+            <input type="text" id="rate" name="rate" placeholder="Enter Crit Rate" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="atk">ATK</label>
+            <input type="text" id="atk" name="atk" placeholder="Enter ATK" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="hp">HP</label>
+            <input type="text" id="hp" name="hp" placeholder="Enter HP" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="heal">Healing Bonus</label>
+            <input type="text" id="heal" name="heal" placeholder="Enter Healing Bonus or N/A if none" required>
+        </div>
+        </div>
+
+
+        <div class="form-row">
+        <button type="submit" class="button">Check Build</button>
+        </div>
+
+        <h2 class="text-center">Recommended Stats</h2>
+        <div id="result" class="alert hidden"></div>
+    </form>
+    </div>
+
+    <audio id="bgm" src="opening.mp3" loop muted></audio>
+    
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById("bgm");
+    const form = document.getElementById('buildForm');
+    const resultDiv = document.getElementById('result');
+
+    audio.play().catch(() => {});
+
+    const startMusic = () => {
+        audio.muted = false; 
+        audio.play();       
+        document.removeEventListener("click", startMusic);
+        document.removeEventListener("keydown", startMusic);
+    };
+
+    document.addEventListener("click", startMusic);
+    document.addEventListener("keydown", startMusic);
+
+    const recommendedStats = {
+        traveler: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 19860.09,
+            "Healing Bonus": "N/A"
+        },
+        albedo: {
+            Artifact: "Retracing Bolide",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        alhaitham: {
+            Artifact: "Deepwood Memories",
+            "DMG Bonus": 55,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2150,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        amber: {
+            Artifact: "Adventurer",
+            "DMG Bonus": 45,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        arlecchino: {
+            Artifact: "Shimenawa's Reminiscence",
+            "DMG Bonus": 60,
+            "CRIT Rate": 120,
+            "CRIT DMG": 250,
+            ATK: 2200,
+            HP: 19000,
+            "Healing Bonus": "N/A"
+        },
+        arataki_itto: {
+            Artifact: "Retracing Bolide",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 240,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        ayato: {
+            Artifact: "Heart of Depth",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        baizhu: {
+            Artifact: "Deepwood Memories",
+            "DMG Bonus": 45,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1950,
+            HP: 17000,
+            "Healing Bonus": "N/A"
+        },
+        barbara: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 45,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1900,
+            HP: 17000,
+            "Healing Bonus": 50
+        },
+        beidou: {
+            Artifact: "Thundering Fury",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        bennett: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18000,
+            "Healing Bonus": 35
+        },
+        candace: {
+            Artifact: "Retracing Bolide",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        chasca: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1900,
+            HP: 16500,
+            "Healing Bonus": "N/A"
+        },
+        chevreuse: {
+            Artifact: "Noblesse Oblige",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": 15
+        },
+        chiori: {
+            Artifact: "Heart of Depth",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        chongyun: {
+            Artifact: "Blizzard Strayer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },  
+        clorinde: {
+            Artifact: "Blizzard Strayer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        collei: {
+            Artifact: "Deepwood Memories",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        cyno: {
+            Artifact: "Gilded Dreams",
+            "DMG Bonus": 55,
+            "CRIT Rate": 115,
+            "CRIT DMG": 240,
+            ATK: 2150,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        diluc: {
+            Artifact: "Crimson Witch of Flames",
+            "DMG Bonus": 60,
+            "CRIT Rate": 110,
+            "CRIT DMG": 250,
+            ATK: 2200,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        diona: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1900,
+            HP: 16500,
+            "Healing Bonus": 30
+        },
+        dori: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1950,
+            HP: 17000,
+            "Healing Bonus": 40
+        },
+        emilie: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1900,
+            HP: 16500,
+            "Healing Bonus": 30
+        },
+        eula: {
+            Artifact: "Blizzard Strayer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2150,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        faruzan: {
+            Artifact: "Viridescent Venerer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        fischl: {
+            Artifact: "Thundering Fury",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        freminet: {
+            Artifact: "Thundering Fury",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        furina: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 18000,
+            "Healing Bonus": 30
+        },
+        ganyu: {
+            Artifact: "Wanderer's Troupe",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        gorou: {
+            Artifact: "Retracing Bolide",
+            "DMG Bonus": 45,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1950,
+            HP: 17000,
+            "Healing Bonus": "N/A"
+        },
+        hu_tao: {
+            Artifact: "Crimson Witch of Flames",
+            "DMG Bonus": 60,
+            "CRIT Rate": 110,
+            "CRIT DMG": 250,
+            ATK: 2200,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        jean: {
+            Artifact: "Gladiator's Finale",
+            "DMG Bonus": 55,
+            "CRIT Rate": 115,
+            "CRIT DMG": 240,
+            ATK: 2150,
+            HP: 18000,
+            "Healing Bonus": 25
+        },
+        kaedehara_kazuha: {
+            Artifact: "Viridescent Venerer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        kaeya: {
+            Artifact: "Gladiator's Finale",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        kaveh: {
+            Artifact: "Noblesse Oblige",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        kamisato_ayaka: {
+            Artifact: "Blizzard Strayer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        keqing: {
+            Artifact: "Gladiator's Finale",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        klee: {
+            Artifact: "Crimson Witch of Flames",
+            "DMG Bonus": 60,
+            "CRIT Rate": 110,
+            "CRIT DMG": 250,
+            ATK: 2200,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        kokomi: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1900,
+            HP: 17500,
+            "Healing Bonus": 50
+        },
+        kuki_shinobu: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1950,
+            HP: 17000,
+            "Healing Bonus": 35
+        },
+        kujou_sara: {
+            Artifact: "Noblesse Oblige",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        layla: {
+            Artifact: "Blizzard Strayer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        lisa: {
+            Artifact: "Thundering Fury",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+
+        lyney: {
+            Artifact: "Gilded Dreams",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+
+        mona: {
+            Artifact: "Noblesse Oblige",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        nahida: {
+            Artifact: "Deepwood Memories",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        nilou: {
+            Artifact: "Heart of Depth",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        ningguang: {
+            Artifact: "Archaic Petra",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        noelle: {
+            Artifact: "Retracing Bolide",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2000,
+            HP: 17500,
+            "Healing Bonus": "N/A"
+        },
+        qiqi: {
+            Artifact: "Maiden Beloved",
+            "DMG Bonus": 50,
+            "CRIT Rate": 100,
+            "CRIT DMG": 200,
+            ATK: 1950,
+            HP: 17000,
+            "Healing Bonus": 30
+        },
+        raiden_shogun: {
+            Artifact: "Emblem of Severed Fate",
+            "DMG Bonus": 55,
+            "CRIT Rate": 120,
+            "CRIT DMG": 240,
+            ATK: 2150,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        razor: {
+            Artifact: "Wolf's Gravestone",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        rosaria: {
+            Artifact: "Blizzard Strayer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        sayu: {
+            Artifact: "Emblem of Severed Fate",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        shenhe: {
+            Artifact: "Blizzard Strayer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        shikanoin_heizou: {
+            Artifact: "Gilded Dreams",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        sucrose: {
+            Artifact: "Viridescent Venerer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        tartaglia: {
+            Artifact: "Heart of Depth",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        thoma: {
+            Artifact: "Noblesse Oblige",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        venti: {
+            Artifact: "Viridescent Venerer",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        wanderer: {
+            Artifact: "Gilded Dreams",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        wriothesley: {
+            Artifact: "Emblem of Severed Fate",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        xiao: {
+            Artifact: "Vermillion Hereafter",
+            "DMG Bonus": 50,
+            "CRIT Rate": 120,
+            "CRIT DMG": 230,
+            ATK: 2150,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        xingqiu: {
+            Artifact: "Heart of Depth",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+
+        xinyan: {
+            Artifact: "Retracing Bolide",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+
+        yae_miko: {
+            Artifact: "Gilded Dreams",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        },
+        yanfei: {
+            Artifact: "Crimson Witch of Flames",
+            "DMG Bonus": 60,
+            "CRIT Rate": 110,
+            "CRIT DMG": 250,
+            ATK: 2200,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        yoimiya: {
+            Artifact: "Shimenawa's Reminiscence",
+            "DMG Bonus": 60,
+            "CRIT Rate": 110,
+            "CRIT DMG": 250,
+            ATK: 2200,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        yunjin: {
+            Artifact: "Noblesse Oblige",
+            "DMG Bonus": 50,
+            "CRIT Rate": 110,
+            "CRIT DMG": 220,
+            ATK: 2050,
+            HP: 18000,
+            "Healing Bonus": "N/A"
+        },
+        zhongli: {
+            Artifact: "Archaic Petra",
+            "DMG Bonus": 50,
+            "CRIT Rate": 115,
+            "CRIT DMG": 230,
+            ATK: 2100,
+            HP: 18500,
+            "Healing Bonus": "N/A"
+        }
+    };
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        resultDiv.innerHTML = ''; 
+        resultDiv.classList.remove('hidden');
+
+
+        Object.assign(resultDiv.style, {
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '20px',
+            marginTop: '20px'
+        });
+
+        const character = form.character.value;
+        const recommended = recommendedStats[character];
+
+        if (!recommended) {
+            resultDiv.innerHTML = 'No recommended stats found for this character.';
+            return;
+        }
+
+        const artifactKeys = Object.keys(recommended); 
+
+        artifactKeys.forEach((key, index) => {
+            setTimeout(() => {
+                const box = document.createElement('div');
+
+                Object.assign(box.style, {
+                    border: '1px solid',
+                    borderRadius: '10px',
+                    fontSize: '2vh',
+                    padding: '20px',
+                    background: '#f2c48d',    
+                    textAlign: 'center',
+                    opacity: '0',
+                    transform: 'translateY(20px)',
+                    transition: 'all 0.5s ease'
+                });
+
+                box.addEventListener('mouseenter', () => {
+                    box.style.transform = 'scale(1.07)';
+                });
+                box.addEventListener('mouseleave', () => {
+                    box.style.transform = 'scale(1)';
+                });
+
+                box.innerHTML = `<strong>${key}:</strong> ${recommended[key]}`;
+                resultDiv.appendChild(box);
+
+
+                setTimeout(() => {
+                    box.style.opacity = '1';
+                    box.style.transform = 'translateY(0)';
+                }, 50);
+
+            }, index * 500); 
+        });
+    });
+});
+</script>
+
+
+
+</body>
+</html>
