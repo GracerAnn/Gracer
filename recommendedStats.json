@@ -1,0 +1,614 @@
+{
+  "traveler": {
+    "Artifact": "Maiden Beloved",
+    "DMG Bonus": 50,
+    "CRIT Rate": 120,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 19860.09,
+    "Healing Bonus": "N/A"
+  },
+  "albedo": {
+    "Artifact": "Retracing Bolide",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2050,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "alhaitham": {
+    "Artifact": "Deepwood Memories",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2150,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "amber": {
+    "Artifact": "Adventurer",
+    "DMG Bonus": 45,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 2000,
+    "HP": 17500,
+    "Healing Bonus": "N/A"
+  },
+  "arlecchino": {
+    "Artifact": "Shimenawa's Reminiscence",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 250,
+    "ATK": 2200,
+    "HP": 19000,
+    "Healing Bonus": "N/A"
+  },
+  "arataki_itto": {
+    "Artifact": "Retracing Bolide",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 240,
+    "ATK": 2100,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "ayato": {
+    "Artifact": "Heart of Depth",
+    "DMG Bonus": 50,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "baizhu": {
+    "Artifact": "Deepwood Memories",
+    "DMG Bonus": 45,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 1950,
+    "HP": 17000,
+    "Healing Bonus": "N/A"
+  },
+  "barbara": {
+    "Artifact": "Maiden Beloved",
+    "DMG Bonus": 45,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 1900,
+    "HP": 17000,
+    "Healing Bonus": 50
+  },
+  "beidou": {
+    "Artifact": "Emblem of Severed Fate",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2150,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "bennett": {
+    "Artifact": "Noblesse Oblige",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2000,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "candace": {
+    "Artifact": "Tenacity of the Millelith",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2050,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "chasca": {
+    "Artifact": "Echoes of an Offering",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2150,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "chevreuse": {
+    "Artifact": "Vermillion Hereafter",
+    "DMG Bonus": 50,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18300,
+    "Healing Bonus": "N/A"
+  },
+  "chiori": {
+    "Artifact": "Husk of Opulent Dreams",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2200,
+    "HP": 18700,
+    "Healing Bonus": "N/A"
+  },
+  "chongyun": {
+    "Artifact": "Blizzard Strayer",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2050,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "clorinde": {
+    "Artifact": "Thundering Fury",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 250,
+    "ATK": 2250,
+    "HP": 18800,
+    "Healing Bonus": "N/A"
+  },
+  "collei": {
+    "Artifact": "Deepwood Memories",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2000,
+    "HP": 17900,
+    "Healing Bonus": "N/A"
+  },
+  "cyno": {
+    "Artifact": "Thundering Fury",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2200,
+    "HP": 18600,
+    "Healing Bonus": "N/A"
+  },
+  "dehya": {
+    "Artifact": "Emblem of Severed Fate",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2050,
+    "HP": 19000,
+    "Healing Bonus": "N/A"
+  },
+  "diluc": {
+    "Artifact": "Crimson Witch of Flames",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 230,
+    "ATK": 2150,
+    "HP": 18600,
+    "Healing Bonus": "N/A"
+  },
+  "diona": {
+    "Artifact": "Noblesse Oblige",
+    "DMG Bonus": 40,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 1800,
+    "HP": 19500,
+    "Healing Bonus": 30
+  },
+  "dori": {
+    "Artifact": "Ocean-Hued Clam",
+    "DMG Bonus": 40,
+    "CRIT Rate": 95,
+    "CRIT DMG": 190,
+    "ATK": 1750,
+    "HP": 19800,
+    "Healing Bonus": 35
+  },
+  "emilie": {
+    "Artifact": "Gilded Dreams",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2150,
+    "HP": 18400,
+    "Healing Bonus": "N/A"
+  },
+  "eula": {
+    "Artifact": "Pale Flame",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 250,
+    "ATK": 2300,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "faruzan": {
+    "Artifact": "Viridescent Venerer",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 1900,
+    "HP": 18100,
+    "Healing Bonus": "N/A"
+  },
+  "fischl": {
+    "Artifact": "Thundering Fury",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18300,
+    "Healing Bonus": "N/A"
+  },
+  "freminet": {
+    "Artifact": "Marechaussee Hunter",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 230,
+    "ATK": 2150,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "furina": {
+    "Artifact": "Marechaussee Hunter",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2100,
+    "HP": 19860,
+    "Healing Bonus": "N/A"
+  },
+  "ganyu": {
+    "Artifact": "Blizzard Strayer",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 250,
+    "ATK": 2200,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "gorou": {
+    "Artifact": "Husk of Opulent Dreams",
+    "DMG Bonus": 40,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 1800,
+    "HP": 19000,
+    "Healing Bonus": "N/A"
+  },
+  "heizou": {
+    "Artifact": "Viridescent Venerer",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "hu_tao": {
+    "Artifact": "Crimson Witch of Flames",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 250,
+    "ATK": 2100,
+    "HP": 15500,
+    "Healing Bonus": "N/A"
+  },
+  "jean": {
+    "Artifact": "Viridescent Venerer",
+    "DMG Bonus": 45,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2000,
+    "HP": 19000,
+    "Healing Bonus": 25
+  },
+  "kaedehara_kazuha": {
+    "Artifact": "Viridescent Venerer",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2000,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "kaeya": {
+    "Artifact": "Blizzard Strayer",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18100,
+    "Healing Bonus": "N/A"
+  },
+  "kaveh": {
+    "Artifact": "Flower of Paradise Lost",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2000,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "keqing": {
+    "Artifact": "Thundering Fury",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2150,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "klee": {
+    "Artifact": "Crimson Witch of Flames",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2100,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "kokomi": {
+    "Artifact": "Ocean-Hued Clam",
+    "DMG Bonus": 40,
+    "CRIT Rate": 70,
+    "CRIT DMG": 140,
+    "ATK": 1800,
+    "HP": 19860,
+    "Healing Bonus": 35
+  },
+  "kuki_shinobu": {
+    "Artifact": "Tenacity of the Millelith",
+    "DMG Bonus": 45,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 1850,
+    "HP": 19000,
+    "Healing Bonus": 25
+  },
+  "lisa": {
+    "Artifact": "Thundering Fury",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2000,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "lyney": {
+    "Artifact": "Marechaussee Hunter",
+    "DMG Bonus": 55,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2200,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "mona": {
+    "Artifact": "Emblem of Severed Fate",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "ningguang": {
+    "Artifact": "Archaic Petra",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "noelle": {
+    "Artifact": "Husk of Opulent Dreams",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2000,
+    "HP": 19500,
+    "Healing Bonus": 20
+  },
+  "nilou": {
+    "Artifact": "Tenacity of the Millelith",
+    "DMG Bonus": 50,
+    "CRIT Rate": 105,
+    "CRIT DMG": 210,
+    "ATK": 1950,
+    "HP": 19860,
+    "Healing Bonus": "N/A"
+  },
+  "qiqi": {
+    "Artifact": "Ocean-Hued Clam",
+    "DMG Bonus": 40,
+    "CRIT Rate": 95,
+    "CRIT DMG": 190,
+    "ATK": 1800,
+    "HP": 19500,
+    "Healing Bonus": 35
+  },
+  "raiden_shogun": {
+    "Artifact": "Emblem of Severed Fate",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 250,
+    "ATK": 2300,
+    "HP": 18800,
+    "Healing Bonus": "N/A"
+  },
+  "razor": {
+    "Artifact": "Pale Flame",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2150,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "rosaria": {
+    "Artifact": "Blizzard Strayer",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18300,
+    "Healing Bonus": "N/A"
+  },
+  "sayu": {
+    "Artifact": "Viridescent Venerer",
+    "DMG Bonus": 45,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 1850,
+    "HP": 19000,
+    "Healing Bonus": 20
+  },
+  "sucrose": {
+    "Artifact": "Viridescent Venerer",
+    "DMG Bonus": 50,
+    "CRIT Rate": 105,
+    "CRIT DMG": 210,
+    "ATK": 1950,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "tartaglia": {
+    "Artifact": "Heart of Depth",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2200,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "thoma": {
+    "Artifact": "Emblem of Severed Fate",
+    "DMG Bonus": 45,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 1900,
+    "HP": 19500,
+    "Healing Bonus": "N/A"
+  },
+  "tighnari": {
+    "Artifact": "Deepwood Memories",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18300,
+    "Healing Bonus": "N/A"
+  },
+  "venti": {
+    "Artifact": "Viridescent Venerer",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2050,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "wriothesley": {
+    "Artifact": "Marechaussee Hunter",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2250,
+    "HP": 18400,
+    "Healing Bonus": "N/A"
+  },
+  "xiao": {
+    "Artifact": "Vermillion Hereafter",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2300,
+    "HP": 18200,
+    "Healing Bonus": "N/A"
+  },
+  "xingqiu": {
+    "Artifact": "Emblem of Severed Fate",
+    "DMG Bonus": 55,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18100,
+    "Healing Bonus": "N/A"
+  },
+  "xinyan": {
+    "Artifact": "Crimson Witch of Flames",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2050,
+    "HP": 18300,
+    "Healing Bonus": "N/A"
+  },
+  "yanfei": {
+    "Artifact": "Crimson Witch of Flames",
+    "DMG Bonus": 60,
+    "CRIT Rate": 110,
+    "CRIT DMG": 250,
+    "ATK": 2200,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "yae_miko": {
+    "Artifact": "Gilded Dreams",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2200,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  },
+  "yaoyao": {
+    "Artifact": "Deepwood Memories",
+    "DMG Bonus": 50,
+    "CRIT Rate": 100,
+    "CRIT DMG": 200,
+    "ATK": 1900,
+    "HP": 20000,
+    "Healing Bonus": 25
+  },
+  "yelan": {
+    "Artifact": "Emblem of Severed Fate",
+    "DMG Bonus": 60,
+    "CRIT Rate": 120,
+    "CRIT DMG": 240,
+    "ATK": 2100,
+    "HP": 18400,
+    "Healing Bonus": "N/A"
+  },
+  "yoimiya": {
+    "Artifact": "Shimenawa's Reminiscence",
+    "DMG Bonus": 60,
+    "CRIT Rate": 110,
+    "CRIT DMG": 250,
+    "ATK": 2200,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "yun_jin": {
+    "Artifact": "Noblesse Oblige",
+    "DMG Bonus": 50,
+    "CRIT Rate": 110,
+    "CRIT DMG": 220,
+    "ATK": 2050,
+    "HP": 18000,
+    "Healing Bonus": "N/A"
+  },
+  "zhongli": {
+    "Artifact": "Archaic Petra",
+    "DMG Bonus": 50,
+    "CRIT Rate": 115,
+    "CRIT DMG": 230,
+    "ATK": 2100,
+    "HP": 18500,
+    "Healing Bonus": "N/A"
+  }
+}
