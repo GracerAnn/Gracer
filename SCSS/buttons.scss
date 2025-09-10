@@ -1,0 +1,14 @@
+.button {
+    font-family: $font-base;
+    padding: $spacer $spacer * 2;
+    border-radius: $border-radius;
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    cursor: pointer;
+    font-size: 2vh;
+    display: block; 
+    margin: $spacer auto;
+
+    &:hover { background-color: $secondary-color; color: #000; }
+}

@@ -1,0 +1,166 @@
+navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  background-color: rgba(0, 0, 0, 0.7490196078);
+  display: flex;
+  gap: 10vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding: 0;
+}
+
+.nav {
+  color: white;
+  text-decoration: none;
+  font-size: 2.2vh;
+  padding: 0 5vh;
+  transition: background 0.3s, color 0.3s;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.logo {
+  border-radius: 1.5vh;
+  height: 7vh;
+}
+
+.form-container {
+  max-width: 900px;
+  margin: 15vh auto;
+  padding: 4vh;
+  background: white;
+  border-radius: 1vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 4vh;
+  margin-bottom: 2vh;
+  font-size: 2vh;
+}
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+.form-group input[type=text], .form-group select {
+  font-family: "HYWenHei 85W";
+  width: 25vw;
+  height: 7vh;
+  font-size: 2.5vh;
+  padding: 1.5vh 2vw;
+  border-radius: 1vw;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  background: #fff;
+}
+
+.form-info input[type=text], .form-info select {
+  width: 43vw;
+  height: 7vh;
+  font-size: 2.5vh;
+  padding: 1.5vh 2vw;
+  border-radius: 1vw;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  background: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "HYWenHei 85W";
+  background-color: #170129;
+  color: #333;
+  overflow-x: hidden;
+}
+
+input, textarea, select {
+  height: auto;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 2vh;
+  font-size: 5vh;
+}
+
+.mb-1 {
+  margin-bottom: 4vh;
+}
+
+.mt-2 {
+  margin-top: 4vh;
+}
+
+.mt-3 {
+  margin-right: 4vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-small {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.alert {
+  padding: 2vh;
+  border-radius: 1vh;
+  margin-top: 2vh;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #00C853;
+  color: white;
+}
+
+.alert-error {
+  background-color: #FF5252;
+  color: white;
+}
+
+.button {
+  font-family: "HYWenHei 85W";
+  padding: 2vh 4vh;
+  border-radius: 1vh;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.7490196078);
+  color: white;
+  cursor: pointer;
+  font-size: 2vh;
+  display: block;
+  margin: 2vh auto;
+}
+.button:hover {
+  background-color: #f2c48d;
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */

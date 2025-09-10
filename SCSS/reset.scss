@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-base;
+  background-color: $background-color;
+  color: $text-color;
+  overflow-x: hidden;
+}
+
+input, textarea, select {
+  height: auto;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}

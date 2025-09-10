@@ -1,0 +1,16 @@
+.text-center { text-align: center; margin-bottom: $spacer; font-size: 5vh; }
+.mb-1 { margin-bottom: $spacer * 2; }
+.mt-2 { margin-top: $spacer * 2; }
+.mt-3 { margin-right: $spacer * 2; }
+.hidden { display: none !important; }
+.text-small { font-size: 0.8rem; color: $text-color; }
+
+
+.alert { 
+  padding: $spacer; 
+  border-radius: $border-radius; 
+  margin-top: $spacer; 
+  text-align: center;
+}
+.alert-success { background-color: #00C853; color: white; }
+.alert-error   { background-color: #FF5252; color: white; }
