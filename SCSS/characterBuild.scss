@@ -1,0 +1,56 @@
+.characters_grid {
+    margin-left: 2vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 cards per row
+    gap: $spacer * 2;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr); // tablet
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr; // mobile
+    }
+    }
+
+.character_card {
+    display: flex;
+    background: white;
+    border-radius: $border-radius;
+    padding: $spacer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    gap: $spacer;
+
+        .character_pic {
+            width: 20vw;
+            height: auto;
+            border-radius: $border-radius;
+            object-fit: cover;
+        }
+
+        .character_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1vh;
+
+                .name {
+                font-size: 1.8vh;
+                font-weight: bold;
+                margin-bottom: $spacer / 2;
+                }
+
+                .details {
+                display: flex;
+                align-items: center;
+                gap: 1vh;
+                font-size: 1.5vh;
+
+                .details_icon {
+                    width: 7vh;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+        }
+    }

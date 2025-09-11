@@ -69,8 +69,11 @@ navbar {
   background: #fff;
 }
 
-.form-info input[type=text], .form-info select {
-  width: 43vw;
+.form-info input[type=text],
+.form-info input[type=number],
+.form-info select {
+  font-family: "HYWenHei 85W";
+  width: 42vw;
   height: 7vh;
   font-size: 2.5vh;
   padding: 1.5vh 2vw;
@@ -125,6 +128,7 @@ input, textarea, select {
 }
 
 .text-small {
+  text-align: center;
   font-size: 0.8rem;
   color: #333;
 }
@@ -161,6 +165,60 @@ input, textarea, select {
 .button:hover {
   background-color: #f2c48d;
   color: #000;
+}
+
+.characters_grid {
+  margin-left: 2vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4vh;
+}
+@media (max-width: 1024px) {
+  .characters_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .characters_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.character_card {
+  display: flex;
+  background: white;
+  border-radius: 1vh;
+  padding: 2vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 2vh;
+}
+.character_card .character_pic {
+  width: 20vw;
+  height: auto;
+  border-radius: 1vh;
+  object-fit: cover;
+}
+.character_card .character_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vh;
+}
+.character_card .character_info .name {
+  font-size: 1.8vh;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+.character_card .character_info .details {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  font-size: 1.5vh;
+}
+.character_card .character_info .details .details_icon {
+  width: 7vh;
+  height: auto;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=style.css.map */

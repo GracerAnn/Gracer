@@ -5,6 +5,8 @@
     <title>Gracer Build</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="GI_logo.jpg" type="image/x-icon">
+    <title>Genshin Impact</title>
 </head>
 <body>
 
@@ -16,6 +18,7 @@
         <a class="nav" href="#builds">Builds</a>
     </navbar>
 
+<section class="checkBuild">
     <div class="form-container" id="builds">
     <h2 class="text-center">Character Build Form</h2>
     <p class="text-small mb-1">Please don't add "%" and make sure to round it up.</p>
@@ -29,6 +32,7 @@
                 <option value="traveler">Traveler</option>
                 <option value="albedo">Albedo</option>
                 <option value="alhaitham">Alhaitham</option>
+                <option value="aloy">Aloy</option>
                 <option value="amber">Amber</option>
                 <option value="arlecchino">Arlecchino</option>
                 <option value="arataki_itto">Arataki Itto</option>
@@ -38,6 +42,8 @@
                 <option value="beidou">Beidou</option>
                 <option value="bennett">Bennett</option>
                 <option value="candace">Candace</option>
+                <option value="citlali">Citlali</option>
+                <option value="charlotte">Charlotte</option>
                 <option value="chasca">Chasca</option>
                 <option value="chevreuse">Chevreuse</option>
                 <option value="chiori">Chiori</option>
@@ -45,51 +51,80 @@
                 <option value="clorinde">Clorinde</option>
                 <option value="collei">Collei</option>
                 <option value="cyno">Cyno</option>
+                <option value="dahlia">Dahlia</option>
                 <option value="dehya">Dehya</option>
                 <option value="diluc">Diluc</option>
                 <option value="diona">Diona</option>
                 <option value="dori">Dori</option>
                 <option value="emilie">Emilie</option>
+                <option value="escoffier">Escoffier</option>                
                 <option value="eula">Eula</option>
                 <option value="faruzan">Faruzan</option>
                 <option value="fischl">Fischl</option>
                 <option value="freminet">Freminet</option>
                 <option value="furina">Furina</option>
+                <option value="gaming">Gaming</option>                
                 <option value="ganyu">Ganyu</option>
                 <option value="gorou">Gorou</option>
                 <option value="heizou">Heizou</option>
                 <option value="hu_tao">Hu Tao</option>
+                <option value="iansan">Iansan</option>
+                <option value="ifa">Ifa</option>
+                <option value="ineffa">Ineffa</option>
                 <option value="jean">Jean</option>
                 <option value="kaedehara_kazuha">Kaedehara Kazuha</option>
+                <option value="kachina">Kachina</option>
                 <option value="kaeya">Kaeya</option>
                 <option value="kaveh">Kaveh</option>
                 <option value="keqing">Keqing</option>
+                <option value="kinich">Kinich</option>
+                <option value="kirara">Kirara</option>
                 <option value="klee">Klee</option>
                 <option value="kokomi">Kokomi</option>
                 <option value="kuki_shinobu">Kuki Shinobu</option>
+                <option value="kujou_sara">Kujou Sara</option>
+                <option value="lan_yan">Lan Yan</option>
+                <option value="layla">Layla</option>
                 <option value="lisa">Lisa</option>
+                <option value="lynette">Lynette</option>
                 <option value="lyney">Lyney</option>
+                <option value="mavuika">Mavuika</option>
+                <option value="mika">Mika</option>
                 <option value="mona">Mona</option>
+                <option value="mualani">Mualani</option>
+                <option value="nahida">Nahida</option>
+                <option value="navia">Navia</option>
+                <option value="neuvillette">Neuvillette</option>
                 <option value="ningguang">Ningguang</option>
                 <option value="noelle">Noelle</option>
                 <option value="nilou">Nilou</option>
+                <option value="ororon">Ororon</option>
                 <option value="qiqi">Qiqi</option>
                 <option value="raiden_shogun">Raiden Shogun</option>
                 <option value="razor">Razor</option>
                 <option value="rosaria">Rosaria</option>
                 <option value="sayu">Sayu</option>
+                <option value="sethos">Sethos</option>
+                <option value="shenhe">Shenhe</option>
+                <option value="sigewinne">Sigewinne</option>
+                <option value="skirk">Skirk</option>
                 <option value="sucrose">Sucrose</option>
                 <option value="tartaglia">Tartaglia</option>
                 <option value="thoma">Thoma</option>
                 <option value="tighnari">Tighnari</option>
+                <option value="varessa">Varessa</option>
                 <option value="venti">Venti</option>
+                <option value="wanderer">Wanderer</option>
                 <option value="wriothesley">Wriothesley</option>
+                <option value="xiangling">Xiangling</option>
+                <option value="xianyun">Xianyun</option>
                 <option value="xiao">Xiao</option>
                 <option value="xingqiu">Xingqiu</option>
                 <option value="xinyan">Xinyan</option>
                 <option value="yae_miko">Yae Miko</option>
                 <option value="yaoyao">Yaoyao</option>
                 <option value="yelan">Yelan</option>
+                <option value="yumemizuki_mizuki">Yumemizuki Mizuki</option>
                 <option value="yun_jin">Yun Jin</option>
                 <option value="zhongli">Zhongli</option>
             </select>
@@ -136,39 +171,52 @@
     </div>
     </div>
 
-        <!-- Artifact Details -->
         <div class="form-row">
         <div class="form-info mt-2">
-            <label for="bonus">DMG Bonus</label>
-            <input type="text" id="bonus" name="bonus" placeholder="Enter characters element DMG bonus" required>
-        </div>
-        </div>
-
-        <div class="form-row">
-        <div class="form-info">
-            <label for="dmg">Crit DMG</label>
-            <input type="text" id="dmg" name="dmg" placeholder="Enter Crit Damage" required>
-        </div>
-        </div>
-
-        <div class="form-row">
-        <div class="form-info">
-            <label for="rate">Crit Rate</label>
-            <input type="text" id="rate" name="rate" placeholder="Enter Crit Rate" required>
+            <label for="hp">HP</label>
+            <input type="number" id="hp" name="hp" placeholder="Enter HP" required>
         </div>
         </div>
 
         <div class="form-row">
         <div class="form-info">
             <label for="atk">ATK</label>
-            <input type="text" id="atk" name="atk" placeholder="Enter ATK" required>
+            <input type="number" id="atk" name="atk" placeholder="Enter ATK" required>
         </div>
         </div>
 
         <div class="form-row">
         <div class="form-info">
-            <label for="hp">HP</label>
-            <input type="text" id="hp" name="hp" placeholder="Enter HP" required>
+            <label for="def">DEF</label>
+            <input type="number" id="def" name="def" placeholder="Enter DEF" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="mastery">Elemental Mastery</label>
+            <input type="number" id="mastery" name="mastery" placeholder="Enter Elemental Mastery" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="bonus">DMG Bonus</label>
+            <input type="number" id="bonus" name="bonus" placeholder="Enter characters element DMG bonus" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="rate">Crit Rate</label>
+            <input type="number" id="rate" name="rate" placeholder="Enter Crit Rate" required>
+        </div>
+        </div>
+
+        <div class="form-row">
+        <div class="form-info">
+            <label for="dmg">Crit DMG</label>
+            <input type="number" id="dmg" name="dmg" placeholder="Enter Crit Damage" required>
         </div>
         </div>
 
@@ -179,6 +227,12 @@
         </div>
         </div>
 
+        <div class="form-row">
+        <div class="form-info">
+            <label for="def">Energy Recharge</label>
+            <input type="number" id="recharge" name="recharge" placeholder="Enter Energy Recharge" required>
+        </div>
+        </div>
 
         <div class="form-row">
         <button type="submit" class="button">Check Build</button>
@@ -188,94 +242,158 @@
         <div id="result" class="alert hidden"></div>
     </form>
     </div>
+</section>
 
+<section class="recommendedBuilds"> 
+
+    <div class="characters_grid">
+        <div class="character_card">
+            <img src="characterBuild/Characters/traveler.png" alt="tavelerA" class="character_pic">
+
+            <div class="character_info">
+            <h3 class="name">Name: Traveler (Anemo)</h3>
+
+            <div class="details">
+                <img src="characterBuild/elements/Element_Anemo.png" alt="Artifact" class="details_icon">
+                <span>Element: Geo</span>
+            </div>
+
+            <div class="details">
+                <img src="characterBuild/venerer.png" alt="Artifact" class="details_icon">
+                <span>Recommended Artifact: Viridescent Venerer</span>
+            </div>
+
+            <div class="details">
+                <img src="characterBuild/necessary/Icon_Goblet_of_Eonothem.webp" alt="Goblet" class="details_icon">
+                <span>Goblet: Anemo DMG Bonus</span>
+            </div>
+
+            <div class="details">
+                <img src="characterBuild/necessary/Icon_Sands_of_Eon.webp" alt="Sands" class="details_icon">
+                <span>Sands: ATK%</span>
+            </div>
+
+            <div class="details">
+                <img src="characterBuild/necessary/Icon_Circlet_of_Logos.webp" alt="Circlet" class="details_icon">
+                <span>Circlet: Crit Rate</span>
+            </div>
+
+            <div class="details">
+                <img src="characterBuild/venerer.png" alt="Artifact" class="details_icon">
+                <span>Recommended Weapon: Viridescent Venerer</span>
+            </div>
+
+            </div>
+        </div>
+        <!-- Repeat character-card for other characters -->
+        </div>
+
+    </div>
+    
+</section>
     <audio id="bgm" src="opening.mp3" loop muted></audio>
 
 <script>
-const form = document.getElementById('buildForm');
-const resultDiv = document.getElementById('result');
+    const audio = document.getElementById("bgm");
+    const form = document.getElementById('buildForm');
+    const resultDiv = document.getElementById('result');
 
-// Example JSON, you need your full recommendedStats here
-let recommendedStats = {};
+        audio.play().catch(() => {});
 
-fetch('recommendedStats.json')
-  .then(response => response.json())
-  .then(data => {
-      recommendedStats = data;
-      console.log('JSON loaded', recommendedStats);
-  })
-  .catch(err => console.error('Failed to load JSON', err));
+        const startMusic = () => {
+            audio.muted = false; 
+            audio.play();       
+            document.removeEventListener("click", startMusic);
+            document.removeEventListener("keydown", startMusic);
+        };
+
+        document.addEventListener("click", startMusic);
+        document.addEventListener("keydown", startMusic);
+
+        let recommendedStats = {};
+
+        fetch('recommendedStats.json')
+        .then(response => response.json())
+        .then(data => {
+            recommendedStats = data;
+            console.log('JSON loaded', recommendedStats);
+        })
+        .catch(err => console.error('Failed to load JSON', err));
 
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    resultDiv.innerHTML = '';
-    resultDiv.classList.remove('hidden');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            resultDiv.innerHTML = '';
+            resultDiv.classList.remove('hidden');
 
-    Object.assign(resultDiv.style, {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '20px',
-        marginTop: '20px'
-    });
+            Object.assign(resultDiv.style, {
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '20px',
+                marginTop: '20px'
+            });
 
-    const character = form.character.value;
-    const recommended = recommendedStats[character];
+            const character = form.character.value;
+            const recommended = recommendedStats[character];
 
-    if (!recommended) {
-        resultDiv.innerHTML = 'No recommended stats found for this character.';
-        return;
-    }
+            if (!recommended) {
+                resultDiv.innerHTML = 'No recommended stats found for this character.';
+                return;
+            }
 
-    const keyMap = {
-        "Artifact": "Recommended Artifact",
-        "DMG Bonus": "Elemental DMG Bonus",
-        "CRIT Rate": "Crit Rate",
-        "CRIT DMG": "Crit Damage",
-        "ATK": "Attack",
-        "HP": "Health Points",
-        "Healing Bonus": "Healing Bonus"
-    };
+            const keyMap = {
+                "Artifact": "Recommended Artifact",
+                "HP": "Health Points",
+                "ATK": "Attack",
+                "DEF": "Defense",
+                "Mastery": "Elemental Mastery",
+                "DMG Bonus": "Elemental DMG Bonus",
+                "CRIT Rate": "Crit Rate",
+                "CRIT DMG": "Crit Damage",
+                "Healing Bonus": "Healing Bonus",
+                "Recharge": "Energy Recharge"
 
-    const createBox = (label, value) => {
-        const box = document.createElement('div');
-        Object.assign(box.style, {
-            border: '1px solid #000',
-            borderRadius: '10px',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.25)',
-            fontSize: '2vh',
-            padding: '20px',
-            background: 'rgba(242,196,141,0.8)',
-            textAlign: 'center',
-            opacity: '0',
-            transform: 'translateY(20px)',
-            transition: 'all 0.5s ease, transform 0.2s'
+            };
+
+            const createBox = (label, value) => {
+                const box = document.createElement('div');
+                Object.assign(box.style, {
+                    border: '1px solid #000',
+                    borderRadius: '10px',
+                    boxShadow: '0 4px 24px rgba(0,0,0,0.25)',
+                    fontSize: '2vh',
+                    padding: '30px',
+                    background: 'rgba(242,196,141,0.8)',
+                    textAlign: 'center',
+                    opacity: '0',
+                    transform: 'translateY(20px)',
+                    transition: 'all 0.5s ease, transform 0.2s'
+                });
+
+                box.addEventListener('mouseenter', () => {
+                    box.style.transform = 'scale(1.07)';
+                });
+                box.addEventListener('mouseleave', () => {
+                    box.style.transform = 'scale(1)';
+                });
+
+                box.innerHTML = `<strong>${label}:</strong> ${value}`;
+                return box;
+            };
+
+            Object.keys(recommended).forEach((key, index) => {
+                setTimeout(() => {
+                    const label = keyMap[key] || key;
+                    const box = createBox(label, recommended[key]);
+                    resultDiv.appendChild(box);
+
+                    setTimeout(() => {
+                        box.style.opacity = '1';
+                        box.style.transform = 'translateY(0)';
+                    }, 50);
+                }, index * 500);
+            });
         });
-
-        box.addEventListener('mouseenter', () => {
-            box.style.transform = 'scale(1.07)';
-        });
-        box.addEventListener('mouseleave', () => {
-            box.style.transform = 'scale(1)';
-        });
-
-        box.innerHTML = `<strong>${label}:</strong> ${value}`;
-        return box;
-    };
-
-    Object.keys(recommended).forEach((key, index) => {
-        setTimeout(() => {
-            const label = keyMap[key] || key;
-            const box = createBox(label, recommended[key]);
-            resultDiv.appendChild(box);
-
-            setTimeout(() => {
-                box.style.opacity = '1';
-                box.style.transform = 'translateY(0)';
-            }, 50);
-        }, index * 500);
-    });
-});
 </script>
 
 </body>
