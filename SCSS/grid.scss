@@ -4,7 +4,8 @@
   padding: $spacer * 2;
   background: white;
   border-radius: $border-radius;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .form-row {
@@ -14,16 +15,16 @@
   margin-bottom: $spacer * 1;
   font-size: 2vh;
 
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     flex-direction: column;
   }
 }
 
-
 .form-group {
-  input[type="text"], select {
+  input[type="text"],
+  select {
     font-family: $font-base;
-    width: 25vw;
+    width: 40vw;
     height: 7vh;
     font-size: 2.5vh;
     padding: 1.5vh 2vw;
@@ -38,10 +39,10 @@
 
 .form-info {
   input[type="text"],
-  input[type="number"], 
+  input[type="number"],
   select {
     font-family: $font-base;
-    width: 42vw;
+    width: 43vw;
     height: 7vh;
     font-size: 2.5vh;
     padding: 1.5vh 2vw;
@@ -54,4 +55,70 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .form-container {
+    max-width: 90%;
+    margin: 12vh auto;
+    padding: $spacer * 1.5;
+    position: relative;
+  }
 
+  .form-info {
+  input[type="text"],
+  input[type="number"],
+  select {
+    font-family: $font-base;
+    width: 80vw;
+    height: 6.5vh;
+    font-size: 2vh;
+    padding: 1.5vh 2vw;
+    border-radius: 1vw;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    background: #fff;
+  }
+}
+
+  .form-row {
+    gap: $spacer * 1.5;
+    font-size: 1.9vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 95%;
+    margin: 10vh auto;
+    padding: $spacer;
+    border-radius: $border-radius * 0.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: $spacer;
+    font-size: 1.8vh;
+    z-index: 1;
+  }
+
+  .form-group input,
+  .form-info input,
+  .form-group select,
+  .form-info select {
+    width: 100%;
+    font-size: 2vh;
+    height: 6vh;
+    padding: 1vh 1.5vh;
+    z-index: 1;
+  }
+
+  button {
+    width: 100%;
+    font-size: 2vh;
+    padding: 1.2vh;
+    z-index: 1;
+  }
+}

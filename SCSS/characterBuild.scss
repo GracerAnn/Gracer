@@ -1,15 +1,15 @@
 .characters_grid {
     margin-left: 2vh;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); // 4 cards per row
+    grid-template-columns: repeat(4, 1fr); 
     gap: $spacer * 2;
 
     @media (max-width: 1024px) {
-        grid-template-columns: repeat(2, 1fr); // tablet
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     @media (max-width: 600px) {
-        grid-template-columns: 1fr; // mobile
+        grid-template-columns: 1fr; 
     }
     }
 

@@ -1,0 +1,17 @@
+#bgvid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;          // keeps it behind everything
+  filter: brightness(60%); // dim video for readability
+  pointer-events: none; // don't block clicks
+}
+
+
+.checkBuild {
+  position: relative;
+  z-index: 1;          // Ensures this content is above the video
+}
