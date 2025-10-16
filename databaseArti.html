@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Genshin Impact</title>
+    <link rel="icon" href="GI_logo.jpg" type="image/x-icon">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+</head>
+
+  <style>
+    body {
+      font-family: 'HYWenHei 85W';
+    }
+  </style>
+
+<body class="pt-5" style="background-color: #f2c48d;">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-4" style="background-color: rgba(33, 37, 41, 0.95);">
+      <div class="container-fluid position-relative">
+        
+          <!-- Burger (on left for mobile) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Nav Links -->
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav mx-auto gap-5 ml-3">
+                  <li class="nav-item"><a class="nav-link text-white fs-5 px-4" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link text-white fs-5 px-4 " href="#">Characters</a></li>
+                  <li class="nav-item"><a class="top-50 start-50 translate-middle" href=""><img src="GI_logo.jpg" alt="Genshin Impact Logo" class="rounded" style="height: 60px;"></a></li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white fs-5 px-4" href="#" id="databaseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Database
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="databaseDropdown">
+                      <li><a class="dropdown-item" href="databaseArti.html">Artifacts</a></li>
+                      <li><a class="dropdown-item" href="weapons.html">Weapons</a></li>
+                      <li><a class="dropdown-item" href="farmables.html">Farmables</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="teams.html">Team Comps</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item"><a class="nav-link text-white fs-5 px-4 " href="build.html">Check Build</a></li>
+                </ul>
+              </div>
+
+      </div>
+</nav>
+
+<style>
+  .navbar-nav .nav-link:hover {
+    background-color: white;
+    color: black !important;
+  }
+</style>
+<!-- NAV -->
+
+<div class="container py-5 mt-5">
+
+  <div class="text-center mb-4">
+    <h2 class="fw-bold display-4" style="color: #7b544e">Artifact Sets</h2>
+    <p class="text-muted">Browse through the artifact sets and discover their 2-piece and 4-piece effects.</p>
+  </div>
+
+<div class="row justify-content-center mb-4">
+  <div class="col-md-6 d-flex align-items-center bg-white rounded shadow-sm p-2">
+    
+    <img src="necessary/Icon_Goblet_of_Eonothem.webp" alt="Logo"
+         style="width:40px; height:40px; margin-right:15px;">
+    
+    <div class="form-floating flex-grow-1 me-2">
+      <input type="text" id="artifactInput" class="form-control border-0" placeholder="Search artifacts...">
+      <label for="artifactInput">Search artifacts...</label>
+    </div>
+
+           <button class="btn btn-dark px-4" type="button">Search</button>
+  </div>
+</div>
+
+  
+  <!-- Cards Grid -->
+<div id="artifact-section">
+    <div class="row g-4" id="artifactContainer">
+
+      <!-- Card 1 -->
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/archaic.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Archaic Petra</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Gain a 15% Geo DMG Bonus.<br>
+              <strong>4-Piece:</strong> Upon obtaining an Elemental Shard, all party members gain 35% DMG Bonus for that element for 10s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/blizzard.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Blizzard Strayer</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Cryo DMG Bonus +15%<br>
+              <strong>4-Piece:</strong> When a character attacks an enemy affected by Cryo, their CRIT Rate is increased by 20%. If the enemy is Frozen, CRIT Rate is increased by an additional 20%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/bloodstained.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Bloodstained Chivalry</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Physical DMG +25%<br>
+              <strong>4-Piece:</strong> After defeating an opponent, increases Charged Attack DMG by 50% and reduces its Stamina cost to 0 for 10s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/crimson.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Deepwood Memories</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Pyro DMG Bonus +15%.<br>
+              <strong>4-Piece:</strong> Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/deepwood.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Deepwood Memories</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Dendro DMG Bonus +15%.<br>
+              <strong>4-Piece:</strong> After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s. This effect can be triggered even if the equipping character is not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/pavilion.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Desert Pavilion Chronicle</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Anemo DMG Bonus +15%.<br>
+              <strong>4-Piece:</strong> When Charged Attacks hit opponents, the equipping character's Normal Attack speed will increase by 10% while Normal, Charged, and Plunging Attack DMG will increase by 40% for 15s
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/echoes.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Echoes of an Offering</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> ATK +18%.<br>
+              <strong>4-Piece:</strong> When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK. This effect will be dispelled 0.05s after a Normal Attack deals DMG. If a Normal Attack fails to trigger Valley Rite, the odds of it triggering the next time will increase by 20%. This trigger can occur once every 0.2s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/severe.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Emblem of Severed Fate</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Energy Recharge +20%.<br>
+              <strong>4-Piece:</strong> Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/finale.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Finale of the Deep Galleries</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Cryo DMG Bonus +15%.<br>
+              <strong>4-Piece:</strong> When the equipping character has 0 Elemental Energy, Normal Attack DMG is increased by 60% and Elemental Burst DMG is increased by 60%. After the equipping character deals Normal Attack DMG, the aforementioned Elemental Burst effect will stop applying for 6s. After the equipping character deals Elemental Burst DMG, the aforementioned Normal Attack effect will stop applying for 6s. This effect can trigger even if the equipping character is off the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/paradise.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Flower of Paradise Lost</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Elemental Mastery +80.<br>
+              <strong>4-Piece:</strong> The equipping character's Bloom, Hyperbloom, and Burgeon reaction DMG are increased by 40%. Additionally, after the equipping character triggers Bloom, Hyperbloom, or Burgeon, they will gain another 25% bonus to the effect mentioned prior. Each stack of this lasts 10s. Max 4 stacks simultaneously. This effect can only be triggered once per second. The character who equips this can still trigger its effects when not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/fragment.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Fragment of Harmonic Whimsy</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> ATK +18%.<br>
+              <strong>4-Piece:</strong> When the value of a Bond of Life increases or decreases, this character deals 18% increased DMG for 6s. Max 3 stacks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/gilded.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Gilded Dreams</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Elemental Mastery +80.<br>
+              <strong>4-Piece:</strong> Within 8s of triggering an Elemental Reaction, the character equipping this will obtain buffs based on the Elemental Type of the other party members. ATK is increased by 14% for each member whose Elemental Type is the same as the equipping character, and EM is increased by 50 for every member with a different Elemental Type. Each of the buffs will count up to 3 characters. This effect can be triggered once every 8s and even when not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/gladiators.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Gladiators Finale</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> ATK +18%.<br>
+              <strong>4-Piece:</strong> If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/golden.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Golden Troupe</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Elemental Skill DMG +20%.<br>
+              <strong>4-Piece:</strong> Increases Elemental Skill DMG by 25%. Additionally when not on the field, Elemental Skill DMG will be further increased by 25%. This effect will be cleared 2s after taking the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/depth.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Heart of Depth</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Hydro DMG Bonus +15%.<br>
+              <strong>4-Piece:</strong> After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s.
+            </p>
+          </div>
+        </div>
+      </div> 
+      
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/husk.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Husk of Opulent Dreams</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> DEF +30%.<br>
+              <strong>4-Piece:</strong> A character equipped with this Artifact set will obtain the Curiosity effect in the following conditions: When on the field, the character gains 1 stack after hitting an opponent with a Geo attack, triggering a maximum of once every 0.3s. When off the field, the character gains 1 stack every 3s. Curiosity can stack up to 4 times, each providing 6% DEF and a 6% Geo DMG Bonus. When 6 seconds pass without gaining a Curiosity stack, 1 stack is lost.
+            </p>
+          </div>
+        </div>
+      </div>  
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/lavawalker.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Lavawalker</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Pyro RES increased by 40%.<br>
+              <strong>4-Piece:</strong> Increased DMG against enemies affected by Pyro by 35%.
+          </div>
+        </div>
+      </div>  
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/long night.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Long Night's Oath</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Plunging Attack DMG increased by 25%.<br>
+              <strong>4-Piece:</strong> After the equipping character's Plunging Attack/Charged Attack/Elemental Skill hits an opponent, they will gain 1/2/2 stack(s) of "Radiance Everlasting." Plunging Attacks, Charged Attacks, or Elemental Skills can each trigger this effect once every 1s. Radiance Everlasting: Plunging Attacks deal 15% increased DMG for 6s. Max 5 stacks. Each stack's duration is counted independently.
+          </div>
+        </div>
+      </div>      
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/maiden.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Maiden Beloved</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Character Healing Effectiveness +15%.<br>
+              <strong>4-Piece:</strong> Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s.
+          </div>
+        </div>
+      </div>    
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/hunter.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Marechaussee Hunter</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Normal and Charged Attack DMG +15%.<br>
+              <strong>4-Piece:</strong> When current HP increases or decreases, CRIT Rate will be increased by 12% for 5s. Max 3 stacks.
+          </div>
+        </div>
+      </div>      
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/unvieling.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Night of the Sky's Unveiling</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Elemental Mastery +80.<br>
+              <strong>4-Piece:</strong> When nearby party members trigger Lunar Reactions, if the equipping character is on the field, gain the Gleaming Moon: Intent effect for 4s: Increases CRIT Rate by 15%/30% when the party's Moonsign is Nascent/Ascendant Gleam. All party members' Lunar Reaction DMG is increased by 10% for each different Gleaming Moon effect that party members have. Effects from Gleaming Moon cannot stack.
+          </div>
+        </div>
+      </div>       
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/nighttime.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Nighttime Whispers in the Echoing Woods</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> ATK +18%.<br>
+              <strong>4-Piece:</strong> After using an Elemental Skill, gain a 20% Geo DMG Bonus for 10s. While under a shield granted by the Crystallize reaction, the above effect will be increased by 150%, and this additional increase disappears 1s after that shield is lost.
+          </div>
+        </div>
+      </div>  
+
+      <div class="col-md-3 artifact-card">
+          <div class="card h-100 shadow-sm border-0 feature-card">
+            <img src="artifacts/noblesse.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Noblesse Oblige</h5>
+              <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+                <strong>2-Piece:</strong> Elemental Burst DMG +20%.<br>
+                <strong>4-Piece:</strong> Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack.
+          </div>
+        </div>  
+      </div>
+
+      <div class="col-md-3 artifact-card">
+          <div class="card h-100 shadow-sm border-0 feature-card">
+            <img src="artifacts/nymphs.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Nymph's Dream</h5>
+              <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+                <strong>2-Piece:</strong> Hydro DMG bonus +15%.<br>
+                <strong>4-Piece:</strong> After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph Stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG bonus will be increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently.
+          </div>
+        </div>
+      </div>  
+
+      <div class="col-md-3 artifact-card">
+          <div class="card h-100 shadow-sm border-0 feature-card">
+            <img src="artifacts/obsidian.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Obsidian Codex</h5>
+              <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+                <strong>2-Piece:</strong> While the equipping character is in Nightsoul's Blessing and is on the field, their DMG dealt is increased by 15%.<br>
+                <strong>4-Piece:</strong> After the equipping character consumes 1 Nightsoul point while on the field, CRIT Rate increases by 40% for 6s. This effect can trigger once every second.
+            </div> 
+          </div>
+      </div> 
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/clam.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Ocean-Hued Clam</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> While the equipping character is in Nightsoul's Blessing and is on the field, their DMG dealt is increased by 15%.<br>
+              <strong>4-Piece:</strong> When the character with this artifact set heals a party member, 1 Foam will appear. It accumulates healed HP for 3 seconds, then explodes and deals 90% of the HP healed as DMG to nearby enemies. Max accumulated healing is 30,000 HP, including over-heal. There can only be 1 Foam active, but it stays even if you swap out. Foam CD is 3.5s.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/pale.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Pale Flame</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Physical DMG +25%.<br>
+              <strong>4-Piece:</strong> When an Elemental skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, 2-set effect is doubled.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/retracing.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Retracing Bolide</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Increases Shield Strength by 35%.<br>
+              <strong>4-Piece:</strong> While protected by a shield, gain an additional 40% Normal and Charged Attack DMG.
+          </div>
+        </div>
+      </div> 
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/scrollofhero.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Scroll of the Hero of Cinder City</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> When a nearby party member triggers a Nightsoul Burst, the equipping character regenerates 6 Elemental Energy.<br>
+              <strong>4-Piece:</strong> After the equipping character triggers a reaction, all nearby party members gain a 12% Elemental DMG Bonus for the involved Elemental Types for 15s. If the equipping character is in the Nightsoul's Blessing state when triggering this effect, all party members gain an additional 28% Elemental DMG bonus for the Elemental Types involved in the reaction for 20s.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/Shimenawa.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Shimenawa's Reminiscence</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> ATK +18%.<br>
+              <strong>4-Piece:</strong> When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charge/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that duration.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/silken.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Silken Moon's Serenade</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Energy Recharge +20%.<br>
+              <strong>4-Piece:</strong> When dealing Elemental DMG, gain the Gleaming Moon: Devotion effect for 8s: Increases all party members' Elemental Mastery by 60/120 when the party's Moonsign is Nascent Gleam/Ascendant Gleam. The equipping character can trigger this effect while off-field. All party members' Lunar Reaction DMG is increased by 10% for each different Gleaming Moon effect that party members have. Effects from Gleaming Moon cannot stack.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/songdays.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Song of Days Past</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Healing Bonus +15%.<br>
+              <strong>4-Piece:</strong> When the equipping character heals a party member, the Yearning effect will be created for 6s, which records the total amount of healing provided (including overflow healing). When the duration expires, the Yearning effect will be transformed into the Waves of Days Past effect: When your active party member hits an opponent with a Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, or Elemental Burst, the DMG dealt will be increased by 8% of the total healing amount recorded by the Yearning effect. The Waves of Days Past effect is removed after it has taken effect 5 times or after 10s. A single instance of the Yearning effect can record up to 15,000 healing, and only a single instance can exist at once, but it can record the healing from multiple equipping characters. Equipping characters on standby can still trigger this effect.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/tenacity.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Tenacity of the Millelith</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> HP +20%.<br>
+              <strong>4-Piece:</strong> When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/thundering.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Thundering Fury</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Electro DMG Bonus +15%.<br>
+              <strong>4-Piece:</strong> Increases damage caused by Overloaded, Electro-Charged, Superconduct, and Hyperbloom by 40%, and the DMG Bonus conferred by Aggravate is increased by 20%. When Quicked or the aforementioned Elemental Reactions are triggered, Elemental Skill CD is decreased by 1s. Can only occur once every 0.8s
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/thundersoother.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Thundersoother</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Electro RES increased by 40%.<br>
+              <strong>4-Piece:</strong> Increases DMG against enemies affected by Electro by 35%.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/unfinished.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Unfinished Reverie</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> ATK+18%.<br>
+              <strong>4-Piece:</strong> After leaving combat for 3s, DMG dealt increases by 50%. In combat, if no Burning opponents are nearby for more than 6s, this DMG Bonus will decrease by 10% per second until it reaches 0%. When a Burning opponent exists, it will increase by 10% instead until it reaches 50%. This effect still triggers if the equipping character is off-field.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/vermilion.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Vermillion Hereafter</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> ATK+18%.<br>
+              <strong>4-Piece:</strong> After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s. When the character's HP decreases, their ATK will further increase by 10%. This further increase can occur this way a maximum of 4 times. This effect can be triggered once every 0.8s. Nascent Light will be dispelled when the character leaves the field. If an Elemental Burst is used again during the duration of Nascent Light, the original Nascent Light will be dispelled.
+          </div> 
+        </div>
+      </div>    
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/venerer.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Viridescent Venerer</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Anemo DMG Bonus +15%.<br>
+              <strong>4-Piece:</strong> Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s.
+          </div> 
+        </div>
+      </div>   
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/Vourukasha.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Vourukasha's Glow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> HP +20%.<br>
+              <strong>4-Piece:</strong> Elemental Skill and Elemental Burst DMG will be increased by 10%. After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field.
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3 artifact-card">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="artifacts/wanderer.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Wanderer's Troupe</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>2-Piece:</strong> Increases Elemental Mastery by 80.<br>
+              <strong>4-Piece:</strong> Increases Charged Attack DMG by 35% if the character uses a Catalyst or a Bow.
+          </div> 
+        </div>
+      </div>
+      
+      <div id="artifactNoResults" class="text-center text-muted mt-4" style="display:none;">
+        No available results
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<style type="text/css">
+          
+            .feature-card {
+                background: transparent;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+
+            .feature-card:hover{
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                background-color: #7b544e;
+                color: white !important;
+            }
+
+            .feature-card:hover .card-body *{
+                color: white !important;
+            }
+            
+            .form-control:focus {
+                box-shadow: none !important; 
+                border-color: #ccc;         
+            }
+
+        </style>
+
+<div id="weaponNoResults" class="text-center text-muted mt-4" style="display:none;">
+  No available results for weapons
+</div>
+
+<!-- Search Filter Script -->
+<script>
+  const artifactInput = document.getElementById('artifactInput');
+  const weaponInput = document.getElementById('weaponInput');
+
+  const artifactCards = document.querySelectorAll('.artifact-card');
+  const weaponCards = document.querySelectorAll('.weapon-card');
+
+  const artifactNoResults = document.getElementById('artifactNoResults');
+  const weaponNoResults = document.getElementById('weaponNoResults');
+
+  // Artifact search
+  artifactInput.addEventListener('keyup', function () {
+    const filter = artifactInput.value.toLowerCase();
+    let visibleCount = 0;
+
+    artifactCards.forEach(card => {
+      const title = card.querySelector('.card-title').textContent.toLowerCase();
+      if (title.includes(filter)) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    artifactNoResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  });
+
+  // Weapon search
+  weaponInput.addEventListener('keyup', function () {
+    const filter = weaponInput.value.toLowerCase();
+    let visibleCount = 0;
+
+    weaponCards.forEach(card => {
+      const title = card.querySelector('.card-title').textContent.toLowerCase();
+      if (title.includes(filter)) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    weaponNoResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  });
+</script>
+
+</body>
+</html>

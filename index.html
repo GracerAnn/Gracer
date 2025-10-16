@@ -11,12 +11,24 @@
 
 <body>
     <navbar>
-        <a class = "nav" href="#home">Home</a>
-        <a class = "nav" href="#regions">Regions</a>
-        <img src="GI_logo.jpg" alt="" class="logo">
-        <a class = "nav" href="#">Characters</a>
-        <a class = "nav" href="build.html">Builds</a>
+      <a class="nav" href="#home">Home</a>
+      <a class="nav" href="#">Characters</a>
+      <img src="GI_logo.jpg" alt="" class="logo">
+
+      <div class="dropdown">
+        <button class="dropbtn">Database ▾</button>
+        <div class="dropdown-content">
+          <a href="databaseArti.html">Artifacts</a>
+          <a href="weapons.html">Weapons</a>
+          <a href="farmables.html">Farmables</a>
+          <hr>
+          <a href="teams.html">Team Comps</a>
+        </div>
+      </div>
+
+      <a class="nav" href="build.html">Check Build</a>
     </navbar>
+
 
     <section class = "page1" id ="home">
         <video autoplay muted loop playsinline class="bg_video">

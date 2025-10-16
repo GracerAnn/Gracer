@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Genshin Impact</title>
+    <link rel="icon" href="GI_logo.jpg" type="image/x-icon">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+</head>
+
+  <style>
+    body {
+      font-family: 'HYWenHei 85W';
+      overflow-x: hidden;
+    }
+  </style>
+
+<body class="pt-5" style="background-color: #f2c48d;">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-4" style="background-color: rgba(33, 37, 41, 0.95);">
+        
+          <!-- Burger (on left for mobile) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Nav Links -->
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav mx-auto gap-5 ml-3">
+                  <li class="nav-item"><a class="nav-link text-white fs-5 px-4" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link text-white fs-5 px-4 " href="#">Characters</a></li>
+                  <li class="nav-item"><a class="top-50 start-50 translate-middle" href=""><img src="GI_logo.jpg" alt="Genshin Impact Logo" class="rounded" style="height: 60px;"></a></li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white fs-5 px-4" href="#" id="databaseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Database
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="databaseDropdown">
+                      <li><a class="dropdown-item" href="databaseArti.html">Artifacts</a></li>
+                      <li><a class="dropdown-item" href="weapons.html">Weapons</a></li>
+                      <li><a class="dropdown-item" href="farmables.html">Farmables</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="teams.html">Team Comps</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item"><a class="nav-link text-white fs-5 px-4 " href="build.html">Check Build</a></li>
+                </ul>
+              </div>
+
+      </div>
+</nav>
+
+<style>
+  .navbar-nav .nav-link:hover {
+    background-color: white;
+    color: black !important;
+  }
+</style>
+<!-- NAV -->
+
+<div class="container py-5 mt-5">
+
+  <div class="text-center mb-4">
+    <h2 class="fw-bold display-4" style="color: #7b544e">Weapons</h2>
+    <p class="text-muted">Browse through the weapons in Genshin Impact empower characters with unique combat styles, elemental effects, and special abilities to enhance battle performance.</p>
+  </div>
+
+<div class="container">
+  <div class="row justify-content-center d-flex mb-4">
+    
+    <div class="col-12 col-md-6 d-flex align-items-center bg-white rounded shadow-sm p-2 mb-2">
+      
+      <img src="necessary/Icon_Inventory_Weapons.webp" alt="Logo"
+           style="width:40px; height:40px; margin-right:15px;">
+      
+      <div class="form-floating flex-grow-1 me-2">
+        <input type="text" id="weaponInput" class="form-control border-0" placeholder="Search Weapons...">
+        <label for="weaponInput">Search Weapons...</label>
+      </div>
+
+      <button class="btn btn-dark px-4" type="button">Search</button>
+    </div>
+
+    <div class="col-12 col-md-2 d-flex flex-column gap-2">
+      <select id="filterStat" class="form-select w-auto">
+        <option value="all">Weapon Stat</option>
+        <option value="atk">ATK</option>
+        <option value="damage">Crit Damage</option>
+        <option value="rate">Crit Rate</option>
+        <option value="def">DEF</option>
+        <option value="em">Elemental Mastery</option>
+        <option value="er">Energy Recharge</option>
+        <option value="hp">HP</option>
+        <option value="pdmg">Physical Damage</option>
+      </select>
+
+      <select id="filterType" class="form-select w-auto">
+        <option value="all">All Weapon Type</option>
+        <option value="bow">Bow</option>
+        <option value="catalyst">Catalyst</option>
+        <option value="claymore">Claymore</option>
+        <option value="sword">Sword</option>
+        <option value="polearm">Polearm</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="weapon-section">
+  <div class="row g-4" id="weaponContainer">
+
+      <!-- Card 1 -->
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/A_Thousand_Blazing_Suns.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">A Thousand Blazing Sun</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Gain the <i>"Scorching Brilliance"</i> effect when using an Elemental Skill or Burst: CRIT DMG increased by 40% and ATK increased by 56% for 6s. This effect can trigger once every 10s. While a <i>"Scorching Brilliance"</i> instance is active, its duration is increased by 2s after Normal or Charged attacks deal Elemental DMG. This effect can trigger once every second. and the max duration increase is 6s. Additionally, when the equipping character is in the Nightsoul's Blessing state, <i>"Scorching Brilliance"</i> effects are increased by 75%, and its duration will not count down when the equipping character is off—field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/A_Thousand_Floating_Dreams.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">A Thousand Floating Dreams</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by <b class="text-danger">32/40/48/56/64</b>. If not, increase the equipping character's DMG Bonus from their Elemental Type by <b class="text-danger">10/14/18/22/26%</b>. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40. Multiple such effects from multiple such weapons can stack.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Absolution.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Absolution</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> CRIT DMG increased by <b class="text-danger">20/25/30/35/40%</b>. Increasing the value of a Bond of Life increases the DMG the equipping character deals by <b class="text-danger">16/20/24/28/32%</b> for 6s. Max 3 stacks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Amos'_Bow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Amo's Bow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Normal Attack and Aimed Shot DMG by <b class="text-danger">12/15/18/21/24%</b>. Increases DMG from arrows shot by a further <b class="text-danger">8/10/12/14/16%</b> for every 0.1s that the arrow is in flight, up to 0.5s. Stacks up to 5 times on each arrow.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Aqua_Simulacra.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Aqua Simulacra</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> HP is increased by <b class="text-danger">16/20/24/28/32%</b>. When there are opponents nearby, the DMG dealt by the wielder of this weapon is increased by 20%. This will take effect whether the character is on-field or not.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="pdmg" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Aquila_Favonia.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Aqua Favonia</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Physical Damage Bonus<br>
+              <strong>Bonus:</strong> ATK is increased by <b class="text-danger">20/25/30/35/40%</b>. Triggers on taking DMG: the soul of the Falcon of the West awakens, holding the banner of the resistance aloft, regenerating HP equal to <b class="text-danger">100/115/130/145/160%</b> of ATK and dealing <b class="text-danger">200/230/260/290/320%</b> of ATK as DMG to surrounding enemies. This effect can only occur once every 15s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Astral_Vulture's_Crimson_Plumage.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Astraln Vulture's Crimson Plumage</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> For 12s after triggering a Swirl reaction, ATK increases by <b class="text-danger">24%/30%/36%/42%/48%</b>. In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by <b class="text-danger">(20%/48%)/(25%/60%)/(30%/72%)/(35%/84%)/(40%/96%)</b> and Elemental Burst DMG dealt is increased by <b class="text-danger">(10%/24%)/(12.5%/30%)/(15%/36%)/(17.5%/42%)/(20%/48%)</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Azurelight.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Azurelight</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Within 12s after an Elemental Skill is used, ATK is increased by 48%. During this time, when the equipping character has 0 Energy, ATK will be further increased by 48%, and CRIT DMG will be increased by 80%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Beacon_of_the_Reed_Sea.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Beacon of the Reed Sea</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> After the character's Elemental Skill hits an opponent, their ATK will be increased by <b class="text-danger">20/25/30/35/40%</b> for 8s. After the character takes DMG, their ATK will be increased by 20% for 8s. The 2 aforementioned effects can be triggered even when the character is not on the field. Additionally, when not protected by a shield, the character's Max HP will be increased by <b class="text-danger">32/40/48/56/64%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+            <span class="new-label">NEW</span>
+
+          <img src="weapons/Bloodsoaked_Ruins.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Bloodsoaked Ruins</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> For 3.5s after using an Elemental Burst, the equipping character's Lunar-Charged DMG dealt to opponents is increased by <b class="text-danger">36%/48%/60%/72%/84%</b>. Additionally, after triggering a Lunar-Charged reaction, the equipping character will gain Requiem of Ruin: CRIT DMG is increased by <b class="text-danger">28%/35%/42%/49%/56%</b> for 6s. They will also regain <b class="text-danger">12/13/14/15/16</b> Elemental Energy. Elemental Energy can be restored this way once every 14s.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Calamity_Queller.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Calamity Queller</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Gain 12% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 3.2% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Cashflow_Supervision.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Cashflow Supervision</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> ATK is increased by <b class="text-danger">16/20/24/28/32%</b>. When current HP increases or decreases, Normal Attack DMG will be increased by <b class="text-danger">16/20/24/28/32%</b> and Charged Attack DMG will be increased by <b class="text-danger">14/17.5/21/24.5/28%</b> for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by <b class="text-danger">8/10/12/14/16%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Crane's_Echoing_Call.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Crane's Echoing Call</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> After the equipping character hits an opponent with a Plunging Attack, all nearby party members' Plunging Attacks deal <b class="text-danger">28%/41%/54%/67%/80%</b> increased DMG for 20s. When nearby party members hit opponents with Plunging Attacks, they will restore <b class="text-danger">2.5/2.75/3/3.25/3.5</b> Energy to the equipping character. Energy can be restored this way every 0.7s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Crimson_Moon's_Semblance.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Crimson Moon's Semblance</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Grants a Bond of Life equal to 25% of Max HP when a Charged Attack hits an opponent. This effect can be triggered up to once every 14s. In addition, when the equipping character has a Bond of Life. they gain a <b class="text-danger">12/16/20/24/28%</b> DMG Bonus; if the value of the Bond of Life is greater than or equal to 30% of Max HP, then gain an additional <b class="text-danger">24/32/40/48/56%</b> DMG.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Elegy_for_the_End.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Elegy for the End</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> A part of the "Millennial Movement" that wanders amidst the winds. Increases Elemental Mastery by <b class="text-danger">60/75/90/105/120</b>. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Farewell Song" effect for 12s. "Millennial Movement: Farewell Song" increases Elemental Mastery by <b class="text-danger">100/125/150/175/200</b> and increases ATK by <b class="text-danger">20/25/30/35/40%</b>. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the "Millennial Movement," buffs of the same type will not stack.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Engulfing_Lightning.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Engulfing Lightning</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> ATK increased by <b class="text-danger">28/34/40/46/52%</b> of Energy Recharge over the base 100%. You can gain a maximum bonus of <b class="text-danger">80/90/100/110/120%</b> ATK. Gain <b class="text-danger">30/35/40/45/50%</b> Energy Recharge for 12s after using an Elemental Burst.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="hp" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Everlasting_Moonglow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Everlasting Moonglow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> HP<br>
+              <strong>Bonus:</strong> Healing Bonus increased by <b class="text-danger">10/12.5/15/17.5/20%</b>, Normal Attack DMG is increased by <b class="text-danger">1/1.5/2/2.5/3%</b> of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Fang_of_the_Mountain_King.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Fang of the Mountain King</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Gain 1 stack of Canopy's Favor after hitting an opponent with an Elemental Skill. This can be triggered once every 0.5s. After a nearby party member triggers a Burning or Burgeon reaction, the equipping character will gain 3 stacks. This effect can be triggered once every 2s and can be triggered even when the triggering party member is off-field. Canopy's Favor: Elemental Skill and Burst DMG is increased by <b class = "text-danger">20% </b>for 6s. Max 6 stacks. Each stack is counted independently.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <div class="col-md-3 weapon-card" data-stat="damage" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Fractured_Halo.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Fractured Halo</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> After an Elemental Skill or Elemental Burst is used, ATK is increased by <b class="text-danger">24%/30%/36%/42%/48%</b> for 20s. If the equipping character creates a Shield while this effect is active, they will gain the Electrifying Edict effect for 20s: All nearby party members deal <b class="text-danger">40%/50%/60%/70%/80%</b> more Lunar-Charged DMG.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Freedom-Sworn.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Freedom Sworn</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> A part of the "Millennial Movement" that wanders amidst the winds. Increases DMG by <b class="text-danger">10/12.5/15/17.5/20%.</b> When the character wielding this weapon triggers Elemental Reactions, they gain a Sigil of Rebellion. This effect can be triggered once every 0.5s and can be triggered even if said character is not on the field.
+                                    When you possess 2 Sigils of Rebellion, all of them will be consumed and all nearby party members will obtain <i>"Millennial Movement: Song of Resistance"</i> for 12s. <i>"Millennial Movement: Song of Resistance"</i> increases Normal, Charged, and Plunging Attack DMG by <b class="text-danger">16/20/24/28/32%</b> and increases ATK by <b class="text-danger">20/25/30/35/40%.</b> Once this effect is triggered, you will not gain Sigils of Rebellion for 20s.
+                                    Of the many effects of the <i>"Millennial Movement,"</i> buffs of the same type will not stack.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Haran_Geppaku_Futsu.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Haran Geppaku Futsu</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Obtain <b class="text-danger">12%</b> All Elemental DMG Bonus. When other nearby party members use Elemental Skills, the character equipping this weapon will gain 1 Wavespike stack. Max 2 stacks. This effect can be triggered once every 0.3s. When the character equipping this weapon uses an Elemental Skill, all stacks of Wavespike will be consumed to gain Rippling Upheaval: each stack of Wavespike consumed will increase Normal Attack DMG by <b class="text-danger">20%</b> for 8s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Hunter's_Path.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Hunter's Path</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Gain <b class="text-danger">12/15/18/21/24%</b> All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by <b class="text-danger">160/200/240/280/320%</b> of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="hp" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Jadefall's_Splendor.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Jadefall's Splender</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> HP<br>
+              <strong>Bonus:</strong> For 3s after using an Elemental Burst or creating a shield, the equipping character can gain the Primordial Jade Regalia effect: Restore <b class="text-danger">4.5/5/5.5/6/6.5</b> Energy every 2.5s, and gain <b class="text-danger">0.3/0.5/0.7/0.9/1.1%</b> Elemental DMG Bonus for their corresponding Elemental Type for every 1,000 Max HP they possess, up to <b class="text-danger">12/20/28/36/44%</b>. Primordial Jade Regalia will still take effect even if the equipping character is not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Kagura's_Verity.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Kagura's Verify</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by <b class="text-danger">12%</b> for 16s. Max 3 stacks. This character will gain <b class="text-danger">12%</b> All Elemental DMG Bonus when they possess 3 stacks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="hp" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Key_of_Khaj-Nisut.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Key of Khaj Nisut</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> HP<br>
+              <strong>Bonus:</strong> HP increased by <b class="text-danger">20%</b>. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by <b class="text-danger">0.12%</b> of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by <b class="text-danger">0.2%</b> of the equipping character's max HP for 20s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Light_of_Foliar_Incision.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Light of Foliar Incision</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> CRIT Rate is increased by <b class="text-danger">4%</b>. After Normal Attacks deal Elemental DMG, the Foliar Incision effect will be obtained, increasing DMG dealt by Normal Attacks and Elemental Skills by <b class="text-danger">120%</b> of Elemental Mastery. This effect will disappear after 28 DMG instances or 12s. You can obtain Foliar Incision once every 12s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Lost_Prayer_to_the_Sacred_Winds.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Lost Prayer to the Sacred Winds</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Increases Movement SPD by 10%. When in battle, earn a <b class="text-danger">6/8/10/12/14%</b> Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Lumidouce_Elegy.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Lumidouce Elegy</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> ATK increased by <b class="text-danger">15/19/23/27/31%</b>. After the equipping character triggers Burning on an opponent or deals Dendro DMG to Burning opponents, the DMG dealt is increased by <b class="text-danger">18/23/28/33/38%</b>. This effect lasts for 8s, max 2 stacks. When 2 stacks are reached or when the duration is refreshed at 2 stacks, restore <b class="text-danger">12/13/14/15/16</b> Energy. Energy can be restored this way once every 12s. The 2 aforementioned effects can be triggered even when the character is off-field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Memory_of_Dust.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Memory of Dust</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increase Shield Strength by <b class="text-danger">20/25/30/35/40%</b>. Scoring hits on opponents increases ATK by <b class="text-danger">4/5/6/7/8%</b> for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Mistsplitter_Reforged.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Mistsplitter Reforged</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> Gain a <b class="text-danger">12/15/18/21/24%</b> Elemental DMG Bonus for every element and receive the might of Mistsplitter's Emblem. At stack levels 1/2/3, Mistsplitter's Emblem provides a <b class="text-danger">8/16/28% // 10/17/35% // 12/18/42% // 14/19/49% // 16/20/56%</b> Elemental DMG Bonus for the character's Elemental Type. The character will obtain 1 stack of Mistsplitter's Emblem in each of the following scenarios: Normal Attack deals Elemental DMG (stack lasts 5s), casting Elemental Burst (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card position-relative" data-stat="em" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+    
+            <span class="new-label">NEW</span>
+
+            <img src="weapons/Nightweaver's_Looking_Glass.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+            <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Nightweaver's Looking Glass</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+                <strong>Drop:</strong> Wish<br>
+                <strong>Secondary:</strong> Elemental Mastery<br>
+                <strong>Bonus:</strong> When the equipping character's Elemental Skill deals 
+                <b class="text-primary">Hydro</b> or <b class="text-success">Dendro DMG</b>, they will gain Prayer of the Far North: 
+                Elemental Mastery is increased by <b class="text-danger">60/75/90/105/120</b> for 4.5s. When nearby party members trigger Lunar-Bloom reactions, 
+                the equipping character gains New Moon Verse: Elemental Mastery is increased by <b class="text-danger">60/75/90/105/120</b> for 10s. 
+                When both Prayer of the Far North and New Moon Verse are in effect, all nearby party members' Bloom DMG is increased by 
+                <b class="text-danger">120%/150%/180%/210%/240%</b>, their Hyperbloom and Burgeon DMG is increased by 
+                <b class="text-danger">80%/100%/120%/140%/160%</b>, and their Lunar-Bloom DMG is increased by 
+                <b class="text-danger">40%/50%/60%/70%/80%</b>. This effect cannot stack. The aforementioned effects can be triggered 
+                even if the equipping character is off-field.
+            </p>
+            </div>
+        </div>
+    </div>
+
+
+      <div class="col-md-3 weapon-card" data-stat="def" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Peak_Patrol_Song.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Peak Patrol Song</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> DEF<br>
+              <strong>Bonus:</strong> Gain <i>"Ode to Flowers"</i> after Normal or Plunging Attacks hit an opponent: DEF increases by 16% and gain a 20% All Elemental DMG Bonus for 6s. Max 2 stacks. Can trigger once per 0.1s. When this effect reaches 2 stacks or the 2nd stack's duration is refreshed, increase all nearby party members' All Elemental DMG Bonus by 16% for every 1,000 DEF the equipping character has, up to a maximum of 51.2%, for 15s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Polar_Star.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Polar Star</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Elemental Skill and Elemental Burst DMG increased by <b class="text-danger">12/15/18/21/24%</b>. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by <b class="text-danger">10/20/30/48%</b>. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Primordial_Jade_Cutter.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Primordial Jade Cutter</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> HP increased by <b class="text-danger">20/25/30/35/40%</b>. Additionally, provides an ATK bonus based on <b class="text-danger">1.2/1.5/1.8/2.1/2.4%</b> of the weilder's Max HP.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Primordial_Jade_Winged-Spear.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Primordial Winged Spear</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> On hit, increases ATK by <b class="text-danger">3.2/3.9/4.6/5.3/6%</b> for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by <b class="text-danger">12/15/18/21/24%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Redhorn_Stonethresher.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Redhorn Stonethresher</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> DEF is increased by <b class="text-danger">28/35/42/49/56%</b>. Normal and Charged Attack DMG is increased by <b class="text-danger">40/50/60/70/80%</b> of DEF.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="hp" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Silvershower_Heartstrings.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Silvershower Heartstrings</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> HP<br>
+              <strong>Bonus:</strong> The equipping character can gain the Remedy effect. When they possess 1/2/3 Remedy stacks, Max HP will increase by <b class="text-danger">12/24/40%//15/30/50%//18/36/60%//21/42/70//24/48/80%</b>. 1 stack may be gained when the following conditions are met: 1 stack for 25s when using an Elemental Skill; 1 stack for 25s when the value of a Bond of Life value increases; 1 stack for 20s for performing healing. Stacks can still be triggered when the equipping character is not on the field. Each stack's duration is counted independently. In addition, when 3 stacks are active, Elemental Burst CRIT Rate will be increased by <b class="text-danger">28/35/42/49/56%</b>. This effect will be canceled 4s after falling under 3 stacks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Skyward_Atlas.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Skyward Atlas</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Elemental DMG Bonus by <b class="text-danger">12/15/18/21/24%</b>. Normal Attack hits have a 50% chance to earn the favor of the clouds. which actively seek out nearby enemies to attack for 15s, dealing <b class="text-danger">160/200/240/280/320%</b> ATK DMG. Can only occur once every 30s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Skyward_Blade.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Skyward Blade</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> CRIT Rate increased by <b class="text-danger">4/5/6/7/8%</b>. Gains Skypiercing Might upon using an Elemental Burst: Increases Movement SPD by 10%, increases ATK SPD by 10%, and increases the DMG of Normal and Charged Attack hits by <b class="text-danger">20/25/30/35/40%</b> for 12s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Skyward_Harp.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Skyward Harp</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Increases CRIT DMG by <b class="text-danger">20/25/30/35/40%</b>. Hits have a <b class="text-danger">60/70/80/90/100%</b> chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every <b class="text-danger">4/3.5/3/2.5/2s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Skyward_Pride.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Skyward Pride</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> Increases all DMG by <b class="text-danger">8/10/12/14/16%</b>. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does <b class="text-danger">80/100/120/140/160%</b> Physical DMG to enemies along its path. Lasts for 20s or 8 vacuum blades.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Skyward_Spine.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Skyward Spine</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> Increases CRIT Rate by <b class="text-danger">8/10/12/14/16%</b> and increases Normal ATK SPD by 12%. Additionally, Normal and Charged Attacks hits on enemies have a 50% chance to trigger a vacuum blade that deals <b class="text-danger">40/55/70/85/100%</b> of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="pdmg" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Song_of_Broken_Pines.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Song of Broken Pines</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Physical Damage Bonus<br>
+              <strong>Bonus:</strong> A part of the <i>"Millennial Movement"</i> that wanders amidst the winds. Increases ATK by <b class="text-danger">16/20/24/28/32%</b>, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s.
+                When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the <i>"Millennial Movement: Banner-Hymn"</i> effect for 12s. <i>"Millennial Movement: Banner-Hymn"</i> increases Normal ATK SPD by <b class="text-danger">12/15/18/21/24%</b> and increases ATK by <b class="text-danger">20/25/30/35/40%</b>.
+                Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement, " buffs of the same type will not stack.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Splendor_of_Tranquil_Waters.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Splendor of Tranquil Waters</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> When the equipping character's current HP increases or decreases, Elemental Skill DMG dealt will be increased by <b class="text-danger">8/10/12/14/16%</b> for 6s. Max 3 stacks. This effect can be triggered once every 0.2s. When other party members' current HP increases or decreases, the equipping character's Max HP will be increased by <b class="text-danger">14/17.5/21/24.5/28%</b> for 6s. Max 2 stacks. This effect can be triggered once every 0.2s. The aforementioned effects can be triggered even if the wielder is off-field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Staff_of_Homa.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Staff of Homa</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> HP increased by <b class="text-danger">20/25/30/35/40%</b>. Additionally, provides an ATK Bonus based on <b class="text-danger">0.8/1/1.2/1.4/1.6%</b> of the wielder's Max HP. When the wielder's HP is less than 50%, this ATK bonus is increased by an additional <b class="text-danger">1/1.2/1.4/1.6/1.8%</b> of Max HP.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Staff_of_the_Scarlet_Sands.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Staff of Scarlet Sands</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> The equipping character gains <b class="text-danger">52/65/78/91/104%</b> of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain <b class="text-danger">28/35/42/49/56%</b> of their Elemental Mastery as bonus ATK. Max 3 stacks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Starcaller's_Watch.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Starcaller's Watch</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Increases Elemental Mastery by 200. Gain the <i>"Mirror of Night"</i> effect within 15s after the equipping character creates a shield: The current active party member deals 56% increased DMG to nearby opponents. You can gain the "Mirror of Night" effect once every 14s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Summit_Shaper.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Summit Shaper</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Shield Strength by <b class="text-danger">20/25/30/35/40%</b>. Scoring hits on opponents increases ATK by <b class="text-danger">4/5/6/7/8%</b> for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Sunny_Morning_Sleep-In.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Sunny Morning Sleep-In</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Elemental Mastery increases by 120 for 6s after triggering Swirl. Elemental Mastery increases by 96 for 9s after the wielder's Elemental Skill hits an opponent. Elemental Mastery increases by 32 for 30s after the wielder's Elemental Burst hits an opponent.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Surf's_Up.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Surf's Up</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> Max HP increased by <b class="text-danger">40%</b>. Once every 15s, for the 14s after using an Elemental Skill: Gain 4 Scorching Summer stacks. Each stack increases Normal Attack DMG by <b class="text-danger">24%</b>. For the duration of the effect, every 1.5s, lose 1 stack after a Normal Attack hits an opponent; once every 1.5s, gain 1 stack after triggering a Vaporize reaction on an opponent. Max 4 Scorching Summer stacks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Symphonist_of_Scents.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Symphonist of Scents</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> ATK is increased by 24%. When the equipping character is off-field, ATK is increased by an additional 24%. After initiating healing, the equipping character and the character(s) they have healed will obtain the <i>"Sweet Echoes"</i> effect, increasing their ATK by 64% for 3s. This effect can be triggered even if the equipping character is off-field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/The_First_Great_Magic.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">The First Great Magic</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> DMG dealt by Charged Attacks increased by <b class="text-danger">16/20/24/28/32%</b>. For every party member with the same Elemental Type as the wielder (including the wielder themselves), gain 1 Gimmick stack. For every party member with a different Elemental Type from the wielder, gain 1 Theatrics stack. When the wielder has 1/2/3 or more Gimmick stacks, ATK will be increased by <b class="text-danger">16/20/24/28/32% // 32/40/48/56/64% // 48/60/72/84/96%</b>. When the wielder has 1/2/3 or more Theatrics stacks, Movement SPD will be increased by <b class="text-danger">4/6/8/10/12% // 7/9/11/13/15% // 10/12/14/16/18%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/The_Unforged.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">The Unforged</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Shield Strength by <b class="text-danger">20/25/30/35/40%</b>, scoring hits on opponents increases ATK by <b class="text-danger">4/5/6/7/8%</b> for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield this ATK increase effect is increased by 100%
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Thundering_Pulse.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Thundering Pulse</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> Increases ATK by <b class="text-danger">20/25/30/35/40%</b> and grants the might of the Thunder Emblem. At stack levels 1/2/3, the Thunder Emblem increases Normal Attack DMG by <b class="text-danger">12/24/40%</b>. The character will obtain 1 stack of Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Tome_of_the_Eternal_Flow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Tome of the Eternal_Flow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> HP is increased by <b class="text-danger">16/20/24/28/32%</b>. When current HP increases or decreases, Charged Attack DMG will be increased by <b class="text-danger">14/18/22/26/30%</b> for 4s. Max 3 stacks, can be triggered once every 0.3s. When you have 3 stacks or refresh a third stack's duration, <b class="text-danger">8/9/10/11/12</b> Energy will be restored. This Energy restoration effect can be triggered once every 12s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Tulaytullah's_Remembrance.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Tulaytullah's Remembrance</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> Normal Attack SPD is increased by <b class="text-danger">10/12.5/15/17.5/20%</b>. After the wielder unleashes an Elemental Skill, Normal Attack DMG will increase by <b class="text-danger">4.8/6/7.2/8.4/9.6%</b> every second for 14s. After this character hits an opponent with a Normal Attack during this duration, Normal Attack DMG will be increased by <b class="text-danger">9.6/12/14.4/16.8/19.2%</b>. This increase can be triggered once every 0.3s. The maximum Normal Attack DMG increase per single duration of the overall effect is <b class="text-danger">48/60/72/84/96%</b>. The effect will be removed when the wielder leaves the field, and using the Elemental Skill again will reset all DMG buffs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Uraku_Misugiri.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Uraku Misugiri</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> Normal Attack DMG is increased by <b class="text-danger">16%/20%/24%/28%/32%</b> and Elemental Skill DMG is increased by <b class="text-danger">24%/30%/36%/42%/48%</b>. After a nearby active character deals <b style="color: #8b7e06;">Geo</b> DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by <b class="text-danger">20%/25%/30%/35%/40%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Verdict.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Verdict</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Increases ATK by <b class="text-danger">20/25/30/35/40%</b>. When characters in your party obtain Elemental Shards from Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by <b class="text-danger">18/22.5/27/31.5/36%</b>. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Vivid_Notions.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Vivid Notions</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> ATK is increased by 56%. When you use a Plunging Attack, you will gain the "Dawn's First Hue" effect: Plunging Attack CRIT DMG is increased by 56%. When you use an Elemental Skill or Burst, you will gain the "Twilight's Splendor" effect: Plunging Attack CRIT DMG is increased by 80%. The two effects above each last for 15s. and will be canceled 0.1s after the ground impact hits a target.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Vortex_Vanquisher.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Vortex Vanquisher</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Shield Strength by <b class="text-danger">20/25/30/35/40%</b>, scoring hits on opponents increases ATK by <b class="text-danger">4/5/6/7/8%</b> for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield this ATK increase effect is increased by 100%
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <img src="weapons/Wolf's_Gravestone.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Wolf's Gravestone</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Shield Strength by <b class="text-danger">20/25/30/35/40%</b>, scoring hits on opponents increases ATK by <b class="text-danger">4/5/6/7/8%</b> for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield this ATK increase effect is increased by 100%
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--END 5 STAR-->
+
+      <hr class="my-4 border-primary" style="border-top: 3px solid #000000; width: 90%; margin: auto;">
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Calamity_of_Eshu.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Calamity of Eshu</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Event<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> While characters are protected by a Shield, DMG dealt by Normal and Charged Attacks is increased by <b class="text-danger">20%/25%/30%/35%/40%</b>, and Normal and Charged Attack CRIT Rate is increased by <b class="text-danger">8%/10%/12%/14%/16%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Deathmatch.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Deathmatch</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> BP Bounty<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> If there are at least 2 opponents nearby, ATK is increased by <b class="text-danger">16/20/24/28/32%</b> and DEF is increased by <b class="text-danger">16/20/24/28/32%</b>. If there are less than 2 enemies nearby, ATK is increased by <b class="text-danger">24/30/36/42/48%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Dragon's_Bane.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Dragon's Bane</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Increases DMG against enemies affected by <b class="text-primary">Hydro</b> or <b class="text-danger">Pyro</b> by <b class="text-danger">20/24/28/32/36%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Earth_Shaker.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Earth Shaker</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Crafting<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> After a party member triggers a Pyro-related reaction, the equipping character's Elemental Skill DMG is increased by <b class="text-danger">32%</b> for 8s. This effect can be triggered even when the triggering party member is not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Fading_Twilight.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Fading Twilight</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> Has three states, Evengleam, Afterglow, and Dawnblaze, which increase DMG dealt by 6/10/14% respectively. When attacks hit opponents, this weapon will switch to the next state. This weapon can change states once every 7s. The character equipping this weapon can still trigger the state switch while not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Favonius_Codex.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Favonius Codex</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> CRIT hits have a <b class="text-danger">60/70/80/90/100%</b> chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every <b class="text-danger">12/10.5/9/7.5/6s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Favonius_Greatsword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Favonius Greatsword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> CRIT hits have a <b class="text-danger">60/70/80/90/100%</b> chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every <b class="text-danger">12/10.5/9/7.5/6s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Favonius_Lance.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Favonius Lance</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> CRIT hits have a <b class="text-danger">60/70/80/90/100%</b> chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every <b class="text-danger">12/10.5/9/7.5/6s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Favonius_Sword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Favonius Sword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> CRIT hits have a <b class="text-danger">60/70/80/90/100%</b> chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every <b class="text-danger">12/10.5/9/7.5/6s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Favonius_Warbow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Favonius Warbow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> CRIT hits have a <b class="text-danger">60/70/80/90/100%</b> chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every <b class="text-danger">12/10.5/9/7.5/6s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Festering_Desire.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Festering Desire</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Event<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> Increases Elemental Skill DMG by <b class="text-danger">16/20/24/28/32%</b> and Elemental Skill CRIT Rate by <b class="text-danger">6/7.5/9/10.5/12%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Lithic_Spear.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Lithic Spear</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> For every characters who hails from Liyue, the characters who equips this weapon gains <b class="text-danger">7/8/9/10/11%</b> ATK increase and a <b class="text-danger">3/4/5/6/7%</b> CRIT Rate increase. This effect stacks up to 4 times.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Luxurious_Sea-Lord.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Luxurious Sea-Lord</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Event<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Elemental Burst DMG by <b class="text-danger">12/15/18/21/24%</b>. When Elemental Burst hits opponents, there is a 100% chance of summoning a titanic tuna that charges and deals <b class="text-danger">100/125/150/175/200%</b> ATK as AoE DMG. This effect can occur once every 15s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Makhaira_Aquamarine.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Makhaira Aquamarine</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> The following effect will trigger every 10s: The equipping character will gain <b class="text-danger">24/30/36/42/48%</b> of their Elemental Mastery as bonus ATK for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Missive_Windspear.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Missive Windspear</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Event<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Within 10s after an Elemental Reaction is triggered, ATK is increased by <b class="text-danger">12/15/18/21/24%</b> and Elemental Mastery is increased by <b class="text-danger">48/60/72/84/96</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Oathsworn_Eye.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Oathsworn Eye</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Event<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Energy Recharge by <b class="text-danger">24%</b> for 10s after using an Elemental Skill.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Prospector's_Drill.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Prospector's Drill</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> When the wielder is healed or heals others, they will gain a Unity's Symbol that lasts 30s, up to a maximum of 3 Symbols. When using their Elemental Skill or Burst, all Symbols will be consumed and the Struggle effect will be granted for 10s. For each Symbol consumed, gain <b class="text-danger">3/4/5/6/7%</b> ATK and <b class="text-danger">7/8.5/10/11.5/13%</b> All Elemental DMG Bonus. The Struggle effect can be triggered once every 15s, and Symbols can be gained even when the character is not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Prototype_Crescent.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Prototype Crescent</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Crafting<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Aimed Shot hits on weak points increase Movement SPD by 10% and ATK by <b class="text-danger">36/45/54/63/72%</b> for 10s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Rainslasher.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Rainslasher</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Increases DMG against enemies affected by <b class="text-primary">Hydro</b> or <b style = "color: #60157e;">Electro</b> by <b class="text-danger">20/25/30/35/40%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Rust.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Rust</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases Normal Attack DMG by <b class="text-danger">40/50/60/70/80%</b> but decreases Aimed Shot DMG by <b class="text-danger">8/9/10/11/12%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Sacrificial_Bow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Sacrificial Bow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> After damaging an opponent with an Elemental Skill, the skill has a <b class="text-danger">40/50/60/70/80%</b> chance to end its own CD. Can only occur once every <b class="text-danger">30/26/22/18/14s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Sacrificial_Fragments.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Sacrificial Fragments</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> After damaging an opponent with an Elemental Skill, the skill has a <b class="text-danger">40/50/60/70/80%</b> chance to end its own CD. Can only occur once every <b class="text-danger">30/26/22/18/14s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Sacrificial_Greatsword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Sacrificial Greatsword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> After damaging an opponent with an Elemental Skill, the skill has a <b class="text-danger">40/50/60/70/80%</b> chance to end its own CD. Can only occur once every <b class="text-danger">30/26/22/18/14s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Sacrificial_Sword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Sacrificial Sword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> After damaging an opponent with an Elemental Skill, the skill has a <b class="text-danger">40/50/60/70/80%</b> chance to end its own CD. Can only occur once every <b class="text-danger">30/26/22/18/14s</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Scion_of_the_Blazing_Sun.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Scion of the Blazing Sun</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> BP Bounty<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> After a Charged Attack hits an opponent, a Sunfire Arrow will descend upon the opponent hit, dealing <b class="text-danger">60/75/90/105/120%</b> ATK as DMG, and applying the Heartsearer effect to the opponent damaged by said Arrow for 10s. Opponents affected by Heartsearer take <b class="text-danger">28/35/42/49/56%</b> more Charged Attack DMG from the wielder. A Sunfire Arrow can be triggered once every 10s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Serpent_Spine.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Serpent Spine</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> BP Bounty<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Every 4s a character is on the field, they will deal <b class="text-danger">6/7/8/9/10%</b> more DMG and take <b class="text-danger">3/2.7/2.4/2.1/1.8%</b> more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be cleared when the character takes DMG.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Solar_Pearl.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Solar Pearl</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> BP Bounty<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Normal Attack hits increase Elemental Skill and Elemental Burst DMG by <b class="text-danger">20/25/30/35/40%</b> for 6s. Likewise, Elemental Skill or Elemental Burst hits increase Normal Attack DMG by <b class="text-danger">20/25/30/35/40%</b> for 6s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Talking_Stick.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Talking Stick</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> BP Bounty<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> ATK will be increased by <b class="text-danger">16/20/24/28/32%</b> for 15s after being affected by Pyro. This effect can be triggered once every 12s. All Elemental DMG Bonus will be increased by <b class="text-danger">12/15/18/21/24%</b> for 15s after being affected by Hydro, Cryo, Electro, or Dendro. This effect can be triggered once every 12s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Tamayuratei_no_Ohanashi.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Tamayuratei no Ohanashi</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Event<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> Increase ATK by 20% and Movement SPD by 10% for 10s when using an Elemental Skill.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/The_Black_Sword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">The Black Sword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> BP Bounty<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Increases DMG dealt by Normal and Charged Attacks by <b class="text-danger">20/25/30/35/40%</b>. Additionally, regenerates <b class="text-danger">60/70/80/90/100%</b> of ATK as HP when Normal and Charged Attacks score a CRIT Hit. This effect can occur once every 5s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/The_Catch.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">The Catch</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Vendor<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> Increases Elemental Burst DMG by <b class="text-danger">16/20/24/28/32%</b> and Elemental Burst CRIT Rate by <b class="text-danger">6/7.5/9/10.5/12%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/The_Stringless.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">The Stringless</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Increases Elemental Skill and Elemental Burst DMG by <b class="text-danger">24/30/36/42/48%</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/The_Widsith.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">The Widsith</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> When a character takes the field, they will gain a random theme song for 10s. This can only occur once every 30s. Recitative: Increases Base ATK by <b class="text-danger">60/75/90/105/120%</b>. Aria: Increases all Elemental DMG by <b class="text-danger">48/60/72/84/96%</b>. Interlude: Elemental Mastery is increased by <b class="text-danger">240/300/360/420/480</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Wavebreaker's_Fin.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Wavebreaker's Fin</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by <b class="text-danger">0.12/0.15/0.18/0.21/0.24%</b>. A maximum of <b class="text-danger">40/50/60/70/80%</b> increased Elemental Burst DMG can be achieved this way.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star-card">
+          <img src="weapons/4star/Xiphos'_Moonlight.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Xiphos' Moonlight</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> The following effect will trigger every 10s: The equipping character will gain <b class="text-danger">0.036/0.045/0.054/0.063/0.072%</b> Energy Recharge for each point of Elemental Mastery they possess for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--END 4 STAR-->
+
+      <hr class="my-4 border-primary" style="border-top: 3px solid #000000; width: 90%; margin: auto;">
+
+      <div class="col-md-3 weapon-card" data-stat="hp" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Black_Tassel.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Black Tassel</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> HP<br>
+              <strong>Bonus:</strong> Increases DMG against slimes by 40/50/60/70/80%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Bloodtainted_Greatsword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Bloodtainted Greatsword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Increases DMG against enemies affected by Pyro or Electro by 12/15/18/21/24%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Cool_Steel.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Cool Steel</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Increases DMG against enemies affected by Hydro or Cryo by 12/15/18/21/24%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Dark_Iron_Sword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Dark Iron Sword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Vendor<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Upon causing an Overloaded, Superconduct, Electro-Charged, or an Electro-infused Swirl reaction, increases Base ATK by 20/25/30/35/40% for 12s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Debate_Club.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Debate Club</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> After using an Elemental Skill, Normal or Charged Attacks, on hit, deal an additional 60/75/90/105/120% ATK DMG in a small area. Effect lasts 15s. DMG can only occur once every 3s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Emerald_Orb.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Emerald Orb</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Upon causing a Vaporize, Electro-Charged, Frozen, or a Hydro-infused Swirl reaction, increases Base ATK by 20/25/30/35/40% for 12s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="hp" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Ferrous_Shadow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Ferrous Shadow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> HP<br>
+              <strong>Bonus:</strong> When HP falls below 70/75/80/85/90%, increases Charged Attack DMG by 30/35/40/45/50%, and Charged Attacks become much harder to interrupt.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Fillet_Blade.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Fillet Blade</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> On hit, has 50% chance to deal 240/280/320/360/400% ATK DMG to a single enemy. Can only occur once every 15/14/13/12/11s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="atk" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Halberd.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Halberd</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Chest<br>
+              <strong>Secondary:</strong> ATK<br>
+              <strong>Bonus:</strong> Normal Attacks deal an additional 160/200/240/280/320% DMG. Can only occur once every 10s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Harbinger_of_Dawn.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Harbinger of Dawn</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> When HP is above 90%, increases CRIT Rate by 14/18/22/24/28%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Magic_Guide.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Magic Guide</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Increases DMG against enemies affected by Hydro or Electro by 12/15/18/21/24%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Messenger.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Messenger</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Chest<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> Aimed Shot hits on weak spots deal an additional 100/125/150/175/200% ATK DMG as CRIT DMG. Can only occur once every 10s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Otherworldly_Story.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Otherworldly Story</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> Each Elemental Orb or Particle collected restores 1/1.25/1.5/1.75/2% HP.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="em" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Raven_Bow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Raven Bow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> Elemental Mastery<br>
+              <strong>Bonus:</strong> Increases DMG against enemies affected by Hydro or Pyro by 12/15/18/21/24%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="HP" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Recurve_Bow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Recurve Bow</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Chest<br>
+              <strong>Secondary:</strong> HP<br>
+              <strong>Bonus:</strong> Defeating an opponent restores 8/10/12/14/16% HP.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="damage" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Sharpshooter's_Oath.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Sharpshooter's Oath</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wiah<br>
+              <strong>Secondary:</strong> CRIT Damage<br>
+              <strong>Bonus:</strong> Increases DMG against weak spots by 24/30/36/42/48%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="pdmg" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Skyrider_Greatsword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Skyrider Greatsword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wiah<br>
+              <strong>Secondary:</strong> Physical Damage<br>
+              <strong>Bonus:</strong> On hit, Normal or Charged Attacks increase ATK by 6/7/8/9/10% for 6s. Max 4 stacks. Can only occur once every 0.5s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="er" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Skyrider_Sword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Skyrider Sword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wiah<br>
+              <strong>Secondary:</strong> Energy Recharge<br>
+              <strong>Bonus:</strong> Using an Elemental Burst grants a 12/15/18/21/24% increase in ATK and Movement SPD for 12s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="bow">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Slingshot.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Slingshot</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wiah<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> If a Normal Attack or Aimed Shot hits a target within 0.3s of being fired, increases DMG by 36/42/48/54/60%; otherwise, it decreases DMG by 10%.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="hp" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Thrilling_Tales_of_Dragon_Slayers.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Thrilling Tales of Dragon Slayers</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wiah<br>
+              <strong>Secondary:</strong> HP<br>
+              <strong>Bonus:</strong> When switching characters, the new character taking the field has their ATK increased by 24/30/36/42/48% for 10s. This effect can only occur once every 20s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="def" data-type="sword">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Traveler's_Handy_Sword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Traveler's Handy Sword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Chest<br>
+              <strong>Secondary:</strong> DEF<br>
+              <strong>Bonus:</strong> Each Elemental Orb or Particle collected restores 1/1.25/1.5/1.75/2% HP.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="catalyst">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/Twin_Nephrite.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">Twin Nephrite</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Chest<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Defeating an enemy increases Movement SPD and ATK by 12/14/16/18/20% for 15s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="def" data-type="claymore">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/White_Iron_Greatsword.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">White Iron Greatsword</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Wish<br>
+              <strong>Secondary:</strong> DEF<br>
+              <strong>Bonus:</strong> Defeating an opponent restores 8/10/12/14/16% HP.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 weapon-card" data-stat="rate" data-type="polearm">
+        <div class="card h-100 shadow-sm border-0 star3-card">
+          <img src="weapons/3star/White_Tassel.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-center">White Tassel</h5>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <strong>Drop:</strong> Chest<br>
+              <strong>Secondary:</strong> CRIT Rate<br>
+              <strong>Bonus:</strong> Increases Normal Attack DMG by 24/30/36/42/48%.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!--END 3 STAR-->
+
+</div>
+</div>
+
+<style type="text/css">
+
+            .new-label {
+                position: absolute;
+                top: -10px;    
+                left: 10px;
+                background: #ffed47; 
+                color: rgb(0, 0, 0);
+                font-weight: 600;
+                font-size: 0.85rem;
+                padding: 6px 12px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                z-index: 5;
+                letter-spacing: 1px;
+                }
+
+
+            .feature-card {
+                background: transparent;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+
+            .feature-card:hover{
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                background-color: #968524;
+                color: white !important;
+            }
+
+            .feature-card:hover .card-body *{
+                color: white !important;
+            }
+            
+            .form-control:focus {
+                box-shadow: none !important; 
+                border-color: #ccc;         
+            }
+
+            .star-card {
+                background: transparent;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+
+            .star-card:hover{
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                background-color: #60157e;
+                color: white !important;
+            }
+
+            .star-card:hover .card-body *{
+                color: white !important;
+            }
+
+            .star3-card {
+                background: transparent;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+
+            .star3-card:hover{
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                background-color: #15657e;
+                color: white !important;
+            }
+
+            .star3-card:hover .card-body *{
+                color: white !important;
+            }
+
+        </style>
+
+<div id="weaponNoResults" class="text-center text-muted mt-4" style="display:none;">
+  No available results for weapons
+</div>
+
+<!-- Search Filter Script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const weaponInput = document.getElementById("weaponInput"); 
+  const filterStat = document.getElementById("filterStat");   
+  const filterType = document.getElementById("filterType");   
+  const weaponCards = document.querySelectorAll(".weapon-card");
+  const weaponNoResults = document.getElementById("weaponNoResults");
+
+  function filterWeapons() {
+    const searchText = weaponInput.value.toLowerCase();
+    const selectedStat = filterStat ? filterStat.value.toLowerCase() : "all";
+    const selectedType = filterType ? filterType.value.toLowerCase() : "all";
+    let visibleCount = 0;
+
+    weaponCards.forEach(card => {
+      const name = card.querySelector(".card-title").textContent.toLowerCase();
+      const stat = card.dataset.stat ? card.dataset.stat.toLowerCase() : "";
+      const type = card.dataset.type ? card.dataset.type.toLowerCase() : "";
+
+      const matchesSearch = name.includes(searchText);
+      const matchesStat = selectedStat === "all" || stat === selectedStat;
+      const matchesType = selectedType === "all" || type === selectedType;
+
+      if (matchesSearch && matchesStat && matchesType) {
+        card.style.display = "";
+        visibleCount++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    if (weaponNoResults) {
+      weaponNoResults.style.display = visibleCount === 0 ? "block" : "none";
+    }
+  }
+
+  if (weaponInput) weaponInput.addEventListener("input", filterWeapons);
+  if (filterStat) filterStat.addEventListener("change", filterWeapons);
+  if (filterType) filterType.addEventListener("change", filterWeapons);
+});
+</script>
+
+</body>
+</html>

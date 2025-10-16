@@ -2,401 +2,416 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gracer Build</title>
+    <title>Genshin Impact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="icon" href="GI_logo.jpg" type="image/x-icon">
-    <title>Genshin Impact</title>
 </head>
-<body>
 
-    <navbar>
-        <a class="nav" href="index.html">Home</a>
-        <a class="nav" href="#">Regions</a>
-        <img src="GI_logo.jpg" alt="Genshin Impact Logo" class="logo">
-        <a class="nav" href="#">Characters</a>
-        <a class="nav" href="#builds">Builds</a>
-    </navbar>
+<body>
+  <navbar>
+    <a class="nav" href="index.html">Home</a>
+    <a class="nav" href="#">Characters</a>
+    <img src="GI_logo.jpg" alt="" class="logo">
+
+    <div class="dropdown">
+      <button class="dropbtn">Database ▾</button>
+      <div class="dropdown-content">
+        <a href="databaseArti.html">Artifacts</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="farmables.html">Farmables</a>
+        <hr>
+        <a href="teams.html">Team Comps</a>
+      </div>
+    </div>
+
+    <a class="nav" href="build.html">Check Build</a>
+  </navbar>
 
 <section class="checkBuild">
-    <div class="form-container" id="builds">
+<video id="bgvid" autoplay muted loop playsinline>
+  <source src="bgvid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  <div class="form-container" id="builds">
     <h2 class="text-center">Character Build Form</h2>
     <p class="text-small mb-1">Please don't add "%" and make sure to round it up.</p>
 
     <form id="buildForm">
-        <div class="form-row">
+
+      <!-- Character Selection -->
+      <div class="form-row">
         <div class="form-group">
-            <label for="character" class="mt-3">Character</label>
-            <select id="character" name="character" required>
+          <label for="character" class="mt-3">Character</label>
+          <select id="character" name="character" required>
             <option value="">Select character</option>
-                <option value="traveler">Traveler</option>
-                <option value="albedo">Albedo</option>
-                <option value="alhaitham">Alhaitham</option>
-                <option value="aloy">Aloy</option>
-                <option value="amber">Amber</option>
-                <option value="arlecchino">Arlecchino</option>
-                <option value="arataki_itto">Arataki Itto</option>
-                <option value="ayato">Ayato</option>
-                <option value="baizhu">Baizhu</option>
-                <option value="barbara">Barbara</option>
-                <option value="beidou">Beidou</option>
-                <option value="bennett">Bennett</option>
-                <option value="candace">Candace</option>
-                <option value="citlali">Citlali</option>
-                <option value="charlotte">Charlotte</option>
-                <option value="chasca">Chasca</option>
-                <option value="chevreuse">Chevreuse</option>
-                <option value="chiori">Chiori</option>
-                <option value="chongyun">Chongyun</option>
-                <option value="clorinde">Clorinde</option>
-                <option value="collei">Collei</option>
-                <option value="cyno">Cyno</option>
-                <option value="dahlia">Dahlia</option>
-                <option value="dehya">Dehya</option>
-                <option value="diluc">Diluc</option>
-                <option value="diona">Diona</option>
-                <option value="dori">Dori</option>
-                <option value="emilie">Emilie</option>
-                <option value="escoffier">Escoffier</option>                
-                <option value="eula">Eula</option>
-                <option value="faruzan">Faruzan</option>
-                <option value="fischl">Fischl</option>
-                <option value="freminet">Freminet</option>
-                <option value="furina">Furina</option>
-                <option value="gaming">Gaming</option>                
-                <option value="ganyu">Ganyu</option>
-                <option value="gorou">Gorou</option>
-                <option value="heizou">Heizou</option>
-                <option value="hu_tao">Hu Tao</option>
-                <option value="iansan">Iansan</option>
-                <option value="ifa">Ifa</option>
-                <option value="ineffa">Ineffa</option>
-                <option value="jean">Jean</option>
-                <option value="kaedehara_kazuha">Kaedehara Kazuha</option>
-                <option value="kachina">Kachina</option>
-                <option value="kaeya">Kaeya</option>
-                <option value="kaveh">Kaveh</option>
-                <option value="keqing">Keqing</option>
-                <option value="kinich">Kinich</option>
-                <option value="kirara">Kirara</option>
-                <option value="klee">Klee</option>
-                <option value="kokomi">Kokomi</option>
-                <option value="kuki_shinobu">Kuki Shinobu</option>
-                <option value="kujou_sara">Kujou Sara</option>
-                <option value="lan_yan">Lan Yan</option>
-                <option value="layla">Layla</option>
-                <option value="lisa">Lisa</option>
-                <option value="lynette">Lynette</option>
-                <option value="lyney">Lyney</option>
-                <option value="mavuika">Mavuika</option>
-                <option value="mika">Mika</option>
-                <option value="mona">Mona</option>
-                <option value="mualani">Mualani</option>
-                <option value="nahida">Nahida</option>
-                <option value="navia">Navia</option>
-                <option value="neuvillette">Neuvillette</option>
-                <option value="ningguang">Ningguang</option>
-                <option value="noelle">Noelle</option>
-                <option value="nilou">Nilou</option>
-                <option value="ororon">Ororon</option>
-                <option value="qiqi">Qiqi</option>
-                <option value="raiden_shogun">Raiden Shogun</option>
-                <option value="razor">Razor</option>
-                <option value="rosaria">Rosaria</option>
-                <option value="sayu">Sayu</option>
-                <option value="sethos">Sethos</option>
-                <option value="shenhe">Shenhe</option>
-                <option value="sigewinne">Sigewinne</option>
-                <option value="skirk">Skirk</option>
-                <option value="sucrose">Sucrose</option>
-                <option value="tartaglia">Tartaglia</option>
-                <option value="thoma">Thoma</option>
-                <option value="tighnari">Tighnari</option>
-                <option value="varessa">Varessa</option>
-                <option value="venti">Venti</option>
-                <option value="wanderer">Wanderer</option>
-                <option value="wriothesley">Wriothesley</option>
-                <option value="xiangling">Xiangling</option>
-                <option value="xianyun">Xianyun</option>
-                <option value="xiao">Xiao</option>
-                <option value="xingqiu">Xingqiu</option>
-                <option value="xinyan">Xinyan</option>
-                <option value="yae_miko">Yae Miko</option>
-                <option value="yaoyao">Yaoyao</option>
-                <option value="yelan">Yelan</option>
-                <option value="yumemizuki_mizuki">Yumemizuki Mizuki</option>
-                <option value="yun_jin">Yun Jin</option>
-                <option value="zhongli">Zhongli</option>
-            </select>
+            <option value="traveler">Traveler</option>
+            <option value="albedo">Albedo</option>
+            <option value="alhaitham">Alhaitham</option>
+            <option value="aloy">Aloy</option>
+            <option value="amber">Amber</option>
+            <option value="arlecchino">Arlecchino</option>
+            <option value="arataki_itto">Arataki Itto</option>
+            <option value="ayato">Ayato</option>
+            <option value="baizhu">Baizhu</option>
+            <option value="barbara">Barbara</option>
+            <option value="beidou">Beidou</option>
+            <option value="bennett">Bennett</option>
+            <option value="candace">Candace</option>
+            <option value="citlali">Citlali</option>
+            <option value="charlotte">Charlotte</option>
+            <option value="chasca">Chasca</option>
+            <option value="chevreuse">Chevreuse</option>
+            <option value="chiori">Chiori</option>
+            <option value="chongyun">Chongyun</option>
+            <option value="clorinde">Clorinde</option>
+            <option value="collei">Collei</option>
+            <option value="cyno">Cyno</option>
+            <option value="dahlia">Dahlia</option>
+            <option value="dehya">Dehya</option>
+            <option value="diluc">Diluc</option>
+            <option value="diona">Diona</option>
+            <option value="dori">Dori</option>
+            <option value="emilie">Emilie</option>
+            <option value="escoffier">Escoffier</option>
+            <option value="eula">Eula</option>
+            <option value="faruzan">Faruzan</option>
+            <option value="fischl">Fischl</option>
+            <option value="freminet">Freminet</option>
+            <option value="furina">Furina</option>
+            <option value="gaming">Gaming</option>
+            <option value="ganyu">Ganyu</option>
+            <option value="gorou">Gorou</option>
+            <option value="heizou">Heizou</option>
+            <option value="hu_tao">Hu Tao</option>
+            <option value="iansan">Iansan</option>
+            <option value="ifa">Ifa</option>
+            <option value="ineffa">Ineffa</option>
+            <option value="jean">Jean</option>
+            <option value="kaedehara_kazuha">Kaedehara Kazuha</option>
+            <option value="kachina">Kachina</option>
+            <option value="kaeya">Kaeya</option>
+            <option value="kaveh">Kaveh</option>
+            <option value="keqing">Keqing</option>
+            <option value="kinich">Kinich</option>
+            <option value="kirara">Kirara</option>
+            <option value="klee">Klee</option>
+            <option value="kokomi">Kokomi</option>
+            <option value="kuki_shinobu">Kuki Shinobu</option>
+            <option value="kujou_sara">Kujou Sara</option>
+            <option value="lan_yan">Lan Yan</option>
+            <option value="layla">Layla</option>
+            <option value="lisa">Lisa</option>
+            <option value="lynette">Lynette</option>
+            <option value="lyney">Lyney</option>
+            <option value="mavuika">Mavuika</option>
+            <option value="mika">Mika</option>
+            <option value="mona">Mona</option>
+            <option value="mualani">Mualani</option>
+            <option value="nahida">Nahida</option>
+            <option value="navia">Navia</option>
+            <option value="neuvillette">Neuvillette</option>
+            <option value="ningguang">Ningguang</option>
+            <option value="noelle">Noelle</option>
+            <option value="nilou">Nilou</option>
+            <option value="ororon">Ororon</option>
+            <option value="qiqi">Qiqi</option>
+            <option value="raiden_shogun">Raiden Shogun</option>
+            <option value="razor">Razor</option>
+            <option value="rosaria">Rosaria</option>
+            <option value="sayu">Sayu</option>
+            <option value="sethos">Sethos</option>
+            <option value="shenhe">Shenhe</option>
+            <option value="sigewinne">Sigewinne</option>
+            <option value="skirk">Skirk</option>
+            <option value="sucrose">Sucrose</option>
+            <option value="tartaglia">Tartaglia</option>
+            <option value="thoma">Thoma</option>
+            <option value="tighnari">Tighnari</option>
+            <option value="varessa">Varessa</option>
+            <option value="venti">Venti</option>
+            <option value="wanderer">Wanderer</option>
+            <option value="wriothesley">Wriothesley</option>
+            <option value="xiangling">Xiangling</option>
+            <option value="xianyun">Xianyun</option>
+            <option value="xiao">Xiao</option>
+            <option value="xingqiu">Xingqiu</option>
+            <option value="xinyan">Xinyan</option>
+            <option value="yae_miko">Yae Miko</option>
+            <option value="yaoyao">Yaoyao</option>
+            <option value="yelan">Yelan</option>
+            <option value="yumemizuki_mizuki">Yumemizuki Mizuki</option>
+            <option value="yun_jin">Yun Jin</option>
+            <option value="zhongli">Zhongli</option>
+          </select>
         </div>
-    </div>
+      </div>
 
-    <div class="form-row">
-    <div class="form-group">
-        <label for="artifatcs" class="mt-3">Artifatcs</label>
-        <select id="artifacts" name="artifacts" required>
+      <!-- Artifact Selection -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="artifacts" class="mt-3">Artifacts</label>
+          <select id="artifacts" name="artifacts" required>
             <option value="">Select Artifact</option>
-                <option value="adventurer">Adventurer</option>
-                <option value="archaic_petra">Archaic Petra</option>
-                <option value="berserker">Berserker</option>
-                <option value="blizzard_strayer">Blizzard Strayer</option>
-                <option value="bloodstained_chivalry">Bloodstained Chivalry</option>
-                <option value="brave_heart">Brave Heart</option>
-                <option value="crimson_witch_of_flames">Crimson Witch of Flames</option>
-                <option value="defenders_will">Defenders Will</option>
-                <option value="desert_pavilion_chronicle">Desert Pavilion Chronicle</option>
-                <option value="emblem_of_severed_fate">Emblem of Severed Fate</option>
-                <option value="gambler">Gambler</option>
-                <option value="gladiators_finale">Gladiator's Finale</option>
-                <option value="heart_of_depth">Heart of Depth</option>
-                <option value="husk_of_opulent_dreams">Husk of Opulent Dreams</option>
-                <option value="instructor">Instructor</option>
-                <option value="lavawalker">Lavawalker</option>
-                <option value="lucky_dog">Lucky Dog</option>
-                <option value="maiden_beloved">Maiden Beloved</option>
-                <option value="martial_artist">Martial Artist</option>
-                <option value="noblesse_oblige">Noblesse Oblige</option>
-                <option value="ocean_hued_clam">Ocean-Hued Clam</option>
-                <option value="pale_flame">Pale Flame</option>
-                <option value="retracing_bolide">Retracing Bolide</option>
-                <option value="shimenawas_reminiscence">Shimenawa's Reminiscence</option>
-                <option value="tenacity_of_the_millelith">Tenacity of the Millelith</option>
-                <option value="thundering_fury">Thundering Fury</option>
-                <option value="thundersoother">Thundersoother</option>
-                <option value="tiny_miracle">Tiny Miracle</option>
-                <option value="traveling_doctor">Traveling Doctor</option>
-                <option value="vermillion_hereafter">Vermillion Hereafter</option>
-                <option value="wanderers_troupe">Wanderer's Troupe</option>
-        </select>
-    </div>
-    </div>
+            <option value="archaic_petra">Archaic Petra</option>
+            <option value="blizzard_strayer">Blizzard Strayer</option>
+            <option value="bloodstained_chivalry">Bloodstained Chivalry</option>
+            <option value="crimson_witch_of_flames">Crimson Witch of Flames</option>
+            <option value="deepwood_memories">Deepwood Memories</option>
+            <option value="desert_pavilion_chronicle">Desert Pavilion Chronicle</option>
+            <option value="echoes_of_an_offering">Echoes of an Offering</option>
+            <option value="emblem_of_severed_fate">Emblem of Severed Fate</option>
+            <option value="finale_of_the_deep_galleries">Finale of the Deep Galleries</option>
+            <option value="flower_of_paradise_lost">Flower of Paradise Lost</option>
+            <option value="fragment_of_harmonic_whimsy">Fragment of Harmonic Whimsy</option>
+            <option value="gilded_dreams">Gilded Dreams</option>
+            <option value="gladiators_finale">Gladiator's Finale</option>
+            <option value="golden_troupe">Golden Troupe</option>
+            <option value="heart_of_depth">Heart of Depth</option>
+            <option value="husk_of_opulent_dreams">Husk of Opulent Dreams</option>
+            <option value="lavawalker">Lavawalker</option>
+            <option value="long_nights_oath">Long Night's Oath</option>
+            <option value="maiden_beloved">Maiden Beloved</option>
+            <option value="marechaussee_hunter">Marechaussee Hunter</option>
+            <option value="night_of_the_skys_unveiling">Night of the Sky's Unveiling</option>
+            <option value="nighttime_whispers_in_the_echoing_woods">Nighttime Whispers in the Echoing Woods</option>
+            <option value="noblesse_oblige">Noblesse Oblige</option>
+            <option value="nymphs_dream">Nymph's Dream</option>
+            <option value="obsidian_codex">Obsidian Codex</option>
+            <option value="ocean_hued_clam">Ocean-Hued Clam</option>
+            <option value="pale_flame">Pale Flame</option>
+            <option value="retracing_bolide">Retracing Bolide</option>
+            <option value="scroll_of_the_hero_of_cinder_city">Scroll of the Hero of Cinder City</option>
+            <option value="silken_moons_serenade">Silken Moon's Serenade</option>
+            <option value="shimenawas_reminiscence">Shimenawa's Reminiscence</option>
+            <option value="song_of_days_past">Song of Days Past</option>
+            <option value="tenacity_of_the_millelith">Tenacity of the Millelith</option>
+            <option value="thundering_fury">Thundering Fury</option>
+            <option value="thundersoother">Thundersoother</option>
+            <option value="unfinished_reverie">Unfinished Reverie</option>
+            <option value="vermillion_hereafter">Vermillion Hereafter</option>
+            <option value="viridescent_venerer">Viridescent Venerer</option>
+            <option value="vourukashas_glow">Vourukasha's Glow</option>
+            <option value="wanderers_troupe">Wanderer's Troupe</option>
+          </select>
+        </div>
+      </div>
 
-        <div class="form-row">
-        <div class="form-info mt-2">
-            <label for="hp">HP</label>
-            <input type="number" id="hp" name="hp" placeholder="Enter HP" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info mt-2">
+        <label for="hp">HP</label>
+        <input type="number" id="hp" name="hp" placeholder="Enter HP" required>
+      </div></div>
 
-        <div class="form-row">
-        <div class="form-info">
-            <label for="atk">ATK</label>
-            <input type="number" id="atk" name="atk" placeholder="Enter ATK" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info">
+        <label for="atk">ATK</label>
+        <input type="number" id="atk" name="atk" placeholder="Enter ATK" required>
+      </div></div>
 
-        <div class="form-row">
-        <div class="form-info">
-            <label for="def">DEF</label>
-            <input type="number" id="def" name="def" placeholder="Enter DEF" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info">
+        <label for="def">DEF</label>
+        <input type="number" id="def" name="def" placeholder="Enter DEF" required>
+      </div></div>
 
-        <div class="form-row">
-        <div class="form-info">
-            <label for="mastery">Elemental Mastery</label>
-            <input type="number" id="mastery" name="mastery" placeholder="Enter Elemental Mastery" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info">
+        <label for="mastery">Elemental Mastery</label>
+        <input type="number" id="mastery" name="mastery" placeholder="Enter Elemental Mastery" required>
+      </div></div>
 
-        <div class="form-row">
-        <div class="form-info">
-            <label for="bonus">DMG Bonus</label>
-            <input type="number" id="bonus" name="bonus" placeholder="Enter characters element DMG bonus" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info">
+        <label for="bonus">DMG Bonus</label>
+        <input type="number" id="bonus" name="bonus" placeholder="Enter characters element DMG bonus" required>
+      </div></div>
 
-        <div class="form-row">
-        <div class="form-info">
-            <label for="rate">Crit Rate</label>
-            <input type="number" id="rate" name="rate" placeholder="Enter Crit Rate" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info">
+        <label for="rate">Crit Rate</label>
+        <input type="number" id="rate" name="rate" placeholder="Enter Crit Rate" required>
+      </div></div>
 
-        <div class="form-row">
-        <div class="form-info">
-            <label for="dmg">Crit DMG</label>
-            <input type="number" id="dmg" name="dmg" placeholder="Enter Crit Damage" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info">
+        <label for="dmg">Crit DMG</label>
+        <input type="number" id="dmg" name="dmg" placeholder="Enter Crit Damage" required>
+      </div></div>
 
-        <div class="form-row">
-        <div class="form-info">
-            <label for="heal">Healing Bonus</label>
-            <input type="text" id="heal" name="heal" placeholder="Enter Healing Bonus or N/A if none" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info">
+        <label for="heal">Healing Bonus</label>
+        <input type="text" id="heal" name="heal" placeholder="Enter Healing Bonus or N/A if none" required>
+      </div></div>
 
-        <div class="form-row">
-        <div class="form-info">
-            <label for="def">Energy Recharge</label>
-            <input type="number" id="recharge" name="recharge" placeholder="Enter Energy Recharge" required>
-        </div>
-        </div>
+      <div class="form-row"><div class="form-info">
+        <label for="recharge">Energy Recharge</label>
+        <input type="number" id="recharge" name="recharge" placeholder="Enter Energy Recharge" required>
+      </div></div>
 
-        <div class="form-row">
+      <div class="form-row">
         <button type="submit" class="button">Check Build</button>
-        </div>
+      </div>
 
-        <h2 class="text-center">Recommended Stats</h2>
-        <div id="result" class="alert hidden"></div>
+      <h2 class="text-center">Recommended Stats</h2>
+      <div id="result" class="alert hidden"></div>
     </form>
-    </div>
+  </div>
 </section>
 
-<section class="recommendedBuilds"> 
+<footer class="footer_text">
+  <p>
+    Gracer Ann S. Escalada BSIT 2A Platform Technologies <br>
+    West Visayas State University - Main Campus<br>
+    College of Information and Communications Technology<br>
+  </p>
 
-    <h2 class="text-center">Character Profiles</h2>
-
-    <div class="characters_grid">
-        <div class="character_card">
-            <img src="Characters/traveler.png" alt="tavelerA" class="character_pic">
-
-            <div class="character_info">
-            <h3 class="name">Name: Traveler (Anemo)</h3>
-
-            <div class="details">
-                <img src="elements/Element_Anemo.png" alt="Artifact" class="details_icon">
-                <span>Element: Geo</span>
-            </div>
-
-            <div class="details">
-                <img src="characterBuild/venerer.png" alt="Artifact" class="details_icon">
-                <span>Recommended Artifact: Viridescent Venerer</span>
-            </div>
-
-            <div class="details">
-                <img src="necessary/Icon_Goblet_of_Eonothem.webp" alt="Goblet" class="details_icon">
-                <span>Goblet: Anemo DMG Bonus</span>
-            </div>
-
-            <div class="details">
-                <img src="necessary/Icon_Sands_of_Eon.webp" alt="Sands" class="details_icon">
-                <span>Sands: ATK%</span>
-            </div>
-
-            <div class="details">
-                <img src="necessary/Icon_Circlet_of_Logos.webp" alt="Circlet" class="details_icon">
-                <span>Circlet: Crit Rate</span>
-            </div>
-
-            <div class="details">
-                <img src="weapons/Skyward_Blade.png" alt="Artifact" class="details_icon">
-                <span>Recommended Weapon: Skyward Blade</span>
-            </div>
-
-            </div>
-        </div>
-        <!-- Repeat character-card for other characters -->
-        </div>
-
+  <div class="footer_infos">
+    <div>
+      <p>
+        Facebook: Gracer Ann S. Escalada <br>
+        Email: gracerann.escalada@wvsu.edu.ph <br>
+        Contact No.: 09663957445<br>
+      </p>
     </div>
-    
-</section>
-    <audio id="bgm" src="opening.mp3" loop muted></audio>
+
+    <div>
+      <p>
+        I do not claim any of the materials or information here <br>
+        This is only for educational purposes<br>
+        Any materials and information used are credited to their owners.<br>
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Genshin Impact and all related assets are <br>
+        © COGNOSPHERE PTE. LTD. / HoYoverse.<br>
+        All rights reserved.<br>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer_logo">
+    <img src="CICT_Logo.png" alt="">
+    <img src="WVSU_Logo.png" alt="">
+    <img src="GI_logo.jpg" alt="">
+  </div>
+</footer>
+
+<script src="JS/buildScript.js"></script>
+
+<audio id="bgm" src="opening.mp3" loop muted></audio>
 
 <script>
-    const audio = document.getElementById("bgm");
-    const form = document.getElementById('buildForm');
-    const resultDiv = document.getElementById('result');
+  const audio = document.getElementById("bgm");
+  const form = document.getElementById('buildForm');
+  const resultDiv = document.getElementById('result');
 
-        audio.play().catch(() => {});
+  // Background music setup
+  audio.play().catch(() => {});
+  const startMusic = () => {
+    audio.muted = false; 
+    audio.play();       
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("keydown", startMusic);
+  };
+  document.addEventListener("click", startMusic);
+  document.addEventListener("keydown", startMusic);
 
-        const startMusic = () => {
-            audio.muted = false; 
-            audio.play();       
-            document.removeEventListener("click", startMusic);
-            document.removeEventListener("keydown", startMusic);
-        };
+  let recommendedStats = {};
+  let timeouts = []; // store all timeouts
 
-        document.addEventListener("click", startMusic);
-        document.addEventListener("keydown", startMusic);
+  fetch('recommendedStats.json')
+  .then(response => response.json())
+  .then(data => {
+    recommendedStats = data;
+    console.log('JSON loaded', recommendedStats);
+  })
+  .catch(err => console.error('Failed to load JSON', err));
 
-        let recommendedStats = {};
+  // Prevent multiple listeners
+  if (!form.hasAttribute('data-listener')) {
+    form.setAttribute('data-listener', 'true');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-        fetch('recommendedStats.json')
-        .then(response => response.json())
-        .then(data => {
-            recommendedStats = data;
-            console.log('JSON loaded', recommendedStats);
-        })
-        .catch(err => console.error('Failed to load JSON', err));
+      // 🧹 Clear old timeouts
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
 
+      // 🧹 Reset result area
+      resultDiv.innerHTML = '';
+      resultDiv.classList.remove('hidden');
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            resultDiv.innerHTML = '';
-            resultDiv.classList.remove('hidden');
+      Object.assign(resultDiv.style, {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: '20px',
+        marginTop: '20px'
+      });
 
-            Object.assign(resultDiv.style, {
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
-                gap: '20px',
-                marginTop: '20px'
-            });
+      const character = form.character.value;
+      const recommended = recommendedStats[character];
 
-            const character = form.character.value;
-            const recommended = recommendedStats[character];
+      if (!recommended) {
+        resultDiv.innerHTML = 'No recommended stats found for this character.';
+        return;
+      }
 
-            if (!recommended) {
-                resultDiv.innerHTML = 'No recommended stats found for this character.';
-                return;
-            }
+      const keyMap = {
+        "Artifact": "Recommended Artifact",
+        "HP": "Health Points",
+        "ATK": "Attack",
+        "DEF": "Defense",
+        "Mastery": "Elemental Mastery",
+        "DMG Bonus": "Elemental DMG Bonus",
+        "CRIT Rate": "Crit Rate",
+        "CRIT DMG": "Crit Damage",
+        "Healing Bonus": "Healing Bonus",
+        "Recharge": "Energy Recharge"
+      };
 
-            const keyMap = {
-                "Artifact": "Recommended Artifact",
-                "HP": "Health Points",
-                "ATK": "Attack",
-                "DEF": "Defense",
-                "Mastery": "Elemental Mastery",
-                "DMG Bonus": "Elemental DMG Bonus",
-                "CRIT Rate": "Crit Rate",
-                "CRIT DMG": "Crit Damage",
-                "Healing Bonus": "Healing Bonus",
-                "Recharge": "Energy Recharge"
-
-            };
-
-            const createBox = (label, value) => {
-                const box = document.createElement('div');
-                Object.assign(box.style, {
-                    border: '1px solid #000',
-                    borderRadius: '10px',
-                    boxShadow: '0 4px 24px rgba(0,0,0,0.25)',
-                    fontSize: '2vh',
-                    padding: '30px',
-                    background: 'rgba(242,196,141,0.8)',
-                    textAlign: 'center',
-                    opacity: '0',
-                    transform: 'translateY(20px)',
-                    transition: 'all 0.5s ease, transform 0.2s'
-                });
-
-                box.addEventListener('mouseenter', () => {
-                    box.style.transform = 'scale(1.07)';
-                });
-                box.addEventListener('mouseleave', () => {
-                    box.style.transform = 'scale(1)';
-                });
-
-                box.innerHTML = `<strong>${label}:</strong> ${value}`;
-                return box;
-            };
-
-            Object.keys(recommended).forEach((key, index) => {
-                setTimeout(() => {
-                    const label = keyMap[key] || key;
-                    const box = createBox(label, recommended[key]);
-                    resultDiv.appendChild(box);
-
-                    setTimeout(() => {
-                        box.style.opacity = '1';
-                        box.style.transform = 'translateY(0)';
-                    }, 50);
-                }, index * 500);
-            });
+      const createBox = (label, value) => {
+        const box = document.createElement('div');
+        Object.assign(box.style, {
+          border: '1px solid #000',
+          borderRadius: '10px',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.25)',
+          fontSize: '2vh',
+          padding: '30px',
+          background: 'rgba(242,196,141,0.8)',
+          textAlign: 'center',
+          opacity: '0',
+          transform: 'translateY(20px)',
+          transition: 'all 0.5s ease, transform 0.2s'
         });
+
+        box.addEventListener('mouseenter', () => {
+          box.style.transform = 'scale(1.07)';
+        });
+        box.addEventListener('mouseleave', () => {
+          box.style.transform = 'scale(1)';
+        });
+
+        box.innerHTML = `<strong>${label}:</strong> ${value}`;
+        return box;
+      };
+
+      Object.keys(recommended).forEach((key, index) => {
+        const t1 = setTimeout(() => {
+          const label = keyMap[key] || key;
+          const box = createBox(label, recommended[key]);
+          resultDiv.appendChild(box);
+
+          const t2 = setTimeout(() => {
+            box.style.opacity = '1';
+            box.style.transform = 'translateY(0)';
+          }, 50);
+
+          timeouts.push(t2);
+        }, index * 500);
+
+        timeouts.push(t1);
+      });
+    });
+  }
 </script>
+
 
 </body>
 </html>
