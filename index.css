@@ -533,6 +533,62 @@ navbar {
     margin-left: auto;
   }
 
+  navbar {
+    overflow: visible !important; /* allow dropdowns to show */
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 1.6vh;
+  }
+
+  .dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.6vh;
+    padding: 0;
+    margin-left: -40px;
+    margin-right: -60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* Allow dropdown to open when tapped (focus-within works on touch) */
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000E6;
+    border-radius: 0.5vh;
+    min-width: 25vw;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 1vh 2vh;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vh;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+
+  
   .social-icons img {
     width: 8vw;               
     padding: 1vw;             
@@ -662,6 +718,42 @@ navbar {
     font-size: 2vh;
     padding: 0.5vh 2vh;
   }
+
+    /* Dropdown adjustments for tablet */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 2vh;
+  }
+
+  .dropbtn {
+    padding: 0.5vh 1.5vh;
+    font-size: 2vh;
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000E6;
+    min-width: 20vw;
+    border-radius: 0.5vh;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    z-index: 30;
+  }
+
+  .dropdown-content a {
+    font-size: 1.6vh;
+    padding: 1vh;
+  }
+
+
   .logo {
     height: 5vh;
     width: auto;
