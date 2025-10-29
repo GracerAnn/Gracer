@@ -17,6 +17,17 @@
 </head>
 
   <style>
+    @font-face {
+      font-family: 'HYWenHei';
+      src: url('zh-cn.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    h1, h2, h3, h4, h5, h6, .navbar, .btn {
+      font-family: 'HYWenHei' !important;
+    }
+
     body {
       font-family: 'HYWenHei 85W';
       overflow-x: hidden;
@@ -45,9 +56,9 @@
                     <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="databaseDropdown">
                       <li><a class="dropdown-item" href="databaseArti.html">Artifacts</a></li>
                       <li><a class="dropdown-item" href="weapons.html">Weapons</a></li>
-                      <li><a class="dropdown-item" href="farmables.html">Farmables</a></li>
+                      <li><a class="dropdown-item" href="">Farmables</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="teams.html">Team Comps</a></li>
+                      <li><a class="dropdown-item" href="">Team Comps</a></li>
                     </ul>
                   </li>
 
@@ -119,7 +130,6 @@
 <div id="weapon-section">
   <div class="row g-4" id="weaponContainer">
 
-      <!-- Card 1 -->
       <div class="col-md-3 weapon-card" data-stat="rate" data-type="claymore">
         <div class="card h-100 shadow-sm border-0 feature-card">
           <img src="weapons/A_Thousand_Blazing_Suns.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
@@ -897,7 +907,7 @@
         <div class="card h-100 shadow-sm border-0 feature-card">
           <img src="weapons/Tome_of_the_Eternal_Flow.png" class="mt-2 card-img-top w-25 img-fluid mx-auto d-block" alt="">
           <div class="card-body">
-            <h5 class="card-title fw-bold text-center">Tome of the Eternal_Flow</h5>
+            <h5 class="card-title fw-bold text-center">Tome of the Eternal Flow</h5>
             <p class="card-text" style="font-family: 'Poppins', sans-serif;">
               <strong>Drop:</strong> Wish<br>
               <strong>Secondary:</strong> CRIT Damage<br>

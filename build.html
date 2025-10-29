@@ -9,24 +9,31 @@
 </head>
 
 <body>
-  <navbar>
-    <a class="nav" href="index.html">Home</a>
-    <a class="nav" href="#">Characters</a>
-    <img src="GI_logo.jpg" alt="" class="logo">
+  <navbar id="navbar">
+  <a class="nav" href="index.html">Home</a>
+  <a class="nav" href="#">Characters</a>
+  <img src="GI_logo.jpg" alt="" class="logo">
 
-    <div class="dropdown">
-      <button class="dropbtn">Database ▾</button>
-      <div class="dropdown-content">
-        <a href="databaseArti.html">Artifacts</a>
-        <a href="weapons.html">Weapons</a>
-        <a href="farmables.html">Farmables</a>
-        <hr>
-        <a href="teams.html">Team Comps</a>
-      </div>
+  <div class="dropdown">
+    <button class="dropbtn">Database ▾</button>
+    <div class="dropdown-content">
+      <a href="databaseArti.html">Artifacts</a>
+      <a href="weapons.html">Weapons</a>
+      <a href="">Farmables</a>
+      <hr>
+      <a href="">Team Comps</a>
     </div>
+  </div>
 
-    <a class="nav" href="build.html">Check Build</a>
-  </navbar>
+  <a class="nav" href="build.html">Check Build</a>
+
+  <!-- ✅ Burger icon -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</navbar>
 
 <section class="checkBuild">
 <video id="bgvid" autoplay muted loop playsinline>
@@ -298,6 +305,18 @@
 <audio id="bgm" src="opening.mp3" loop muted></audio>
 
 <script>
+  // ====== Navbar Burger Toggle ======
+  const burger = document.getElementById('burger');
+  const navbar = document.getElementById('navbar');
+
+  if (burger && navbar) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      navbar.classList.toggle('active');
+    });
+  }
+
+  // ====== Background Music and Form Logic ======
   const audio = document.getElementById("bgm");
   const form = document.getElementById('buildForm');
   const resultDiv = document.getElementById('result');
@@ -317,15 +336,15 @@
   let timeouts = []; // store all timeouts
 
   fetch('recommendedStats.json')
-  .then(response => response.json())
-  .then(data => {
-    recommendedStats = data;
-    console.log('JSON loaded', recommendedStats);
-  })
-  .catch(err => console.error('Failed to load JSON', err));
+    .then(response => response.json())
+    .then(data => {
+      recommendedStats = data;
+      console.log('JSON loaded', recommendedStats);
+    })
+    .catch(err => console.error('Failed to load JSON', err));
 
   // Prevent multiple listeners
-  if (!form.hasAttribute('data-listener')) {
+  if (form && !form.hasAttribute('data-listener')) {
     form.setAttribute('data-listener', 'true');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -411,6 +430,7 @@
     });
   }
 </script>
+
 
 
 </body>
