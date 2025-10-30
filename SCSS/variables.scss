@@ -1,5 +1,5 @@
-$primary-color: #000000BF; // navbar bg
-$secondary-color: #f2c48d; // hover / highlights
+$primary-color: #000000BF;
+$secondary-color: #f2c48d;
 $text-color: #333;
 $input-border: #ccc;
 $border-radius: 1vh;
@@ -7,10 +7,14 @@ $spacer: 2vh;
 $font-base: 'HYWenHei 85W';
 
 @font-face {
-  font-family: 'HYWenHei';
+  font-family: 'HYWenHei 85W';
   src: url('zh-cn.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+body {
+  font-family: $font-base;
+  color: $text-color;
+}
